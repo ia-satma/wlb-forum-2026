@@ -95,5 +95,6 @@ html, body { max-width: 100%; overflow-x: hidden; }
     gap: var(--space-7) !important;
     padding: var(--space-9) var(--page-gutter) var(--space-7) !important;
   }
-  footer img { max-width: 46vw; height: auto !important; }
+  footer img { max-width: 40%; height: auto !important; }
+  footer > div > div:first-child > div:first-child { gap: var(--space-4) !important; }
 }
