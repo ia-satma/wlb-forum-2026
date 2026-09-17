@@ -16,6 +16,8 @@ html, body { max-width: 100%; overflow-x: hidden; }
     --space-9: 56px;
     --space-10: 72px;
     --space-11: 88px;
+    --size-heading: 22px;
+    --size-subheading: 19px;
   }
 
   header > div {
@@ -87,7 +89,15 @@ html, body { max-width: 100%; overflow-x: hidden; }
     padding-right: var(--page-gutter) !important;
   }
 
-  h2 { font-size: clamp(28px, 9vw, 40px) !important; }
+  h2 {
+    font-size: clamp(26px, 7.5vw, 30px) !important;
+    line-height: 1.12 !important;
+    text-wrap: balance;
+  }
+  h3 {
+    font-size: 22px !important;
+    line-height: 1.15 !important;
+  }
   #registro img { max-width: min(100%, 360px); margin-inline: auto; }
 
   footer > div {
