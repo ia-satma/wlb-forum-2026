@@ -3,3 +3,90 @@
 @import "tokens/typography.css";
 @import "tokens/spacing.css";
 @import "tokens/effects.css";
+
+/* Mobile layout --------------------------------------------------------
+   The exported design-system components use inline desktop grid values.
+   These focused overrides keep the poster-like visual language, while
+   preventing the fixed desktop tracks from forcing horizontal scrolling. */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+@media (max-width: 767px) {
+  :root {
+    --page-gutter: 20px;
+    --space-9: 56px;
+    --space-10: 72px;
+    --space-11: 88px;
+  }
+
+  header > div {
+    padding: 12px var(--page-gutter) !important;
+    gap: var(--space-3) !important;
+  }
+  header nav { display: none !important; }
+  header img { max-width: 132px; height: auto !important; }
+  header button, header a[role="button"] { margin-left: auto; white-space: nowrap; }
+
+  #inicio > div:nth-of-type(1) { padding-top: var(--space-6) !important; }
+  #inicio > div:nth-of-type(2) {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: var(--space-7) !important;
+    padding: var(--space-7) var(--page-gutter) var(--space-8) !important;
+  }
+  #inicio h1 { font-size: clamp(56px, 18vw, 76px) !important; }
+  #inicio > div:nth-of-type(3) > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    padding: 0 var(--page-gutter) !important;
+  }
+  #inicio > div:nth-of-type(3) > div > div {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    gap: var(--space-2) !important;
+    padding: var(--space-4) var(--space-2) !important;
+  }
+
+  .countband > div { padding: var(--space-8) var(--page-gutter) !important; }
+  .countband > div > div:first-child > div:last-child {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100%;
+    gap: var(--space-4) !important;
+  }
+  .countband > div > div:first-child > div:last-child > div {
+    min-width: 0 !important;
+  }
+  .countband > div > div:first-child > div:last-child > span { display: none !important; }
+  .countband .rows { align-items: flex-start; flex-direction: column; width: 100%; }
+
+  #programa > div,
+  #registro > div {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: var(--space-7) !important;
+    padding: var(--space-10) var(--page-gutter) !important;
+  }
+  #programa > div > div:first-child { position: static !important; }
+  #programa ol > li {
+    grid-template-columns: 70px minmax(0, 1fr) !important;
+    gap: var(--space-3) !important;
+    padding-left: var(--space-5) !important;
+  }
+  #programa ol > li > span:nth-child(2) { font-size: 22px !important; }
+
+  #expectativas [style*="grid-template-columns"],
+  #galeria [style*="grid-template-columns"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  #expectativas [style*="minmax(min(100%, 380px)"] { min-width: 0 !important; }
+
+  #foro > div,
+  #accesos > div,
+  #patrocinio > div,
+  #teaser > div,
+  #expectativas > div,
+  #galeria > div {
+    padding-left: var(--page-gutter) !important;
+    padding-right: var(--page-gutter) !important;
+  }
+
+  h2 { font-size: clamp(28px, 9vw, 40px) !important; }
+  #registro img { max-width: min(100%, 360px); margin-inline: auto; }
+}
