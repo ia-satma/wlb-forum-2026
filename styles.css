@@ -107,4 +107,11 @@ html, body { max-width: 100%; overflow-x: hidden; }
   }
   footer img { max-width: 40%; height: auto !important; }
   footer > div > div:first-child > div:first-child { gap: var(--space-4) !important; }
+
+  /* Avoid invisible sections when the scroll observer is throttled on mobile. */
+  [style*="will-change: opacity"] {
+    opacity: 1 !important;
+    transform: none !important;
+    will-change: auto !important;
+  }
 }
