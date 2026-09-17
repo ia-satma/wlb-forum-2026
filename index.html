@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><title>X WORK LIFE BALANCE FORUM 2026</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="./styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="./wlb-ds.js"></script>
+<style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy-700);font-family:var(--font-body);color:var(--text-body)}a{color:var(--orange-500)}a:hover{color:var(--orange-400)}img{max-width:100%}
+.countband{background:var(--navy-900);border-top:var(--border-hairline);border-bottom:var(--border-hairline)}.countband>div{max-width:var(--page-max);margin:0 auto;padding:var(--space-9) var(--page-gutter);display:flex;flex-direction:column;align-items:center;gap:var(--space-7)}
+.countband .rows{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-8)}</style></head>
+<body><div id="root"></div>
+<script type="text/babel">
+const NS = window.WLBForumDesignSystem_a27a89;
+const { Navbar, Hero, Sponsors, DiezAnos, Ejes, Countdown, DetailRow, Program, VideoBlock,
+        Expectations, CultureStatement, VenueAccess, SponsorCta, Gallery, Register,
+        SiteFooter, Dialog, Button, Field, Input, Checkbox, Reveal, Marquee } = NS;
+const TICKER = ['Persona','Liderazgo','Impacto','Futuro','10ma edición','Jueves 5 de noviembre','Club Industrial','Work Life Balance Forum'];
+
+const ITEMS = [
+  { id:'foro', label:'El foro', href:'#foro' },
+  { id:'programa', label:'Programa', href:'#programa' },
+  { id:'expectativas', label:'Esta edición', href:'#expectativas' },
+  { id:'accesos', label:'Accesos', href:'#accesos' },
+  { id:'galeria', label:'Galería', href:'#galeria' }
+];
+
+/* "¿Quieres saber más sobre el evento?" — the enquiry modal the real page carries. */
+function EnquiryDialog({ open, onClose }){
+  const [sent,setSent]=React.useState(false);
+  return (
+    <Dialog open={open} title={sent?'Gracias':'¿Quieres saber más sobre el evento?'} onClose={onClose} width={560}
+      footer={sent
+        ? <Button onClick={onClose}>Listo</Button>
+        : <><Button variant="ghost" onClick={onClose}>Cancelar</Button><Button onClick={()=>setSent(true)}>Enviar</Button></>}>
+      {sent ? 'Nuestro staff administrativo se pondrá en contacto contigo a la brevedad.' : (
+        <div style={{display:'flex',flexDirection:'column',gap:'var(--space-4)'}}>
+          <p style={{margin:0}}>Por favor déjanos un mensaje y nuestro staff administrativo se pondrá en contacto contigo a la brevedad.</p>
+          <Field label="Nombre" htmlFor="q-n"><Input id="q-n" placeholder="Nombre y apellido"/></Field>
+          <Field label="Correo" htmlFor="q-c"><Input id="q-c" type="email" placeholder="nombre@empresa.com"/></Field>
+          <Field label="Mensaje" htmlFor="q-m"><Input id="q-m" placeholder="¿Qué te gustaría saber?"/></Field>
+          <Checkbox label="Deseo recibir información sobre los eventos del IMEF Grupo Monterrey." checked onChange={()=>{}}/>
+          <p style={{margin:0,fontSize:'var(--size-small)',fontStyle:'italic',color:'var(--text-muted)'}}>Respetamos tu privacidad y no compartiremos tu información con terceros.</p>
+        </div>
+      )}
+    </Dialog>
+  );
+}
+
+function App(){
+  const [enquiry,setEnquiry]=React.useState(false);
+  const soldOut=false; /* set true to show the "Registros agotados" state */
+  const goRegister=()=>{const el=document.getElementById('registro');if(el)window.scrollTo({top:el.offsetTop-80,behavior:'smooth'});};
+  return (<div>
+    <Navbar items={ITEMS} cta={{label:soldOut?'Agotado':'Regístrate aquí',onClick:goRegister}} assetBase="./assets"/>
+    <Hero assetBase="./assets" onRegister={goRegister} soldOut={soldOut}/>
+    <Marquee items={TICKER}/>
+    <Reveal><Sponsors/></Reveal>
+    <Reveal><DiezAnos assetBase="./assets"/></Reveal>
+    <Reveal><Ejes/></Reveal>
+    <Reveal><div className="countband"><div>
+      <Countdown target="2026-11-05T08:30:00-06:00"/>
+      <div className="rows">
+        <DetailRow icon="calendar" primary="Jueves 5 de noviembre" secondary="2026" iconSize={28}/>
+        <DetailRow icon="map-pin" primary="Club Industrial" secondary="San Pedro Garza García, N.L." iconSize={28}/>
+      </div>
+    </div></div></Reveal>
+    <Reveal><Program/></Reveal>
+    <Reveal><VideoBlock/></Reveal>
+    <Reveal><Expectations/></Reveal>
+    <Reveal><CultureStatement/></Reveal>
+    <Reveal><VenueAccess/></Reveal>
+    <Reveal><SponsorCta/></Reveal>
+    <Reveal><Gallery assetBase="./assets"/></Reveal>
+    <Reveal><Register assetBase="./assets"/></Reveal>
+    <SiteFooter assetBase="./assets" onRegister={goRegister} soldOut={soldOut}/>
+    <div style={{position:'fixed',right:24,bottom:24,zIndex:50}}>
+      <Button variant="secondary" size="sm" onClick={()=>setEnquiry(true)}>¿Quieres saber más?</Button>
+    </div>
+    <EnquiryDialog open={enquiry} onClose={()=>setEnquiry(false)}/>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

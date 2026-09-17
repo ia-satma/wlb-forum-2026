@@ -1,0 +1,52 @@
+:root{
+  --font-display:"Poppins","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Poppins","Helvetica Neue",Arial,sans-serif;
+  --font-mono:ui-monospace,"SFMono-Regular",Menlo,monospace;
+
+  --weight-regular:400;
+  --weight-medium:500;
+  --weight-semibold:600;
+  --weight-bold:700;
+  --weight-black:800;
+
+  /* Sizes measured off the 1118x1450 source poster, then expressed as a
+     screen scale. Poster-scale values are kept as --poster-* for collateral. */
+  --size-display-xl:88px;   /* WLB FORUM */
+  --size-display-l:56px;
+  --size-display-m:40px;
+  --size-heading:28px;
+  --size-subheading:22px;
+  --size-lead:18px;
+  --size-body:16px;
+  --size-small:14px;
+  --size-eyebrow:13px;
+  --size-micro:11px;
+
+  --poster-display:148px;   /* WLB / FORUM cap height band on the poster */
+  --poster-accent:42px;     /* WORK LIFE BALANCE */
+  --poster-eyebrow:36px;    /* 10MA EDICION */
+  --poster-tagline:29px;    /* 10 ANOS TRANSFORMANDO... */
+  --poster-detail:32px;     /* JUEVES 5 DE NOVIEMBRE */
+  --poster-label:19px;      /* PERSONA / LIDERAZGO / ... */
+
+  --leading-display:.88;
+  --leading-tight:1.12;
+  --leading-heading:1.2;
+  --leading-body:1.5;
+  --leading-loose:1.65;
+
+  /* Tracking is the signature of this brand: everything set in caps is
+     letter-spaced wide, and the wider the smaller the type. */
+  --track-display:-.01em;
+  --track-accent:.16em;     /* WORK LIFE BALANCE */
+  --track-eyebrow:.14em;    /* 10MA EDICION */
+  --track-tagline:.09em;    /* caps taglines */
+  --track-label:.08em;      /* pillar labels, buttons */
+  --track-body:0; /* @kind other */
+
+  /* Semantic roles */
+  --text-style-display:var(--weight-black) var(--size-display-xl)/var(--leading-display) var(--font-display);
+  --text-style-heading:var(--weight-bold) var(--size-heading)/var(--leading-heading) var(--font-display);
+  --text-style-body:var(--weight-regular) var(--size-body)/var(--leading-body) var(--font-body);
+  --text-style-label:var(--weight-bold) var(--size-eyebrow)/1.2 var(--font-display);
+}

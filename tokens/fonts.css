@@ -1,0 +1,8 @@
+/* WLB Forum — webfonts.
+   SUBSTITUTION NOTICE: no font binaries were supplied with the source artwork.
+   The display face on the 10ma Edicion poster is a geometric humanist sans with a
+   circular bowl, flat-terminal 'e' and straight-leg 'R'; the closest freely
+   available match is Poppins (Google Fonts), used here at 400/500/600/700/800.
+   Replace this @import with local @font-face rules if the real licensed family
+   (and its binaries) becomes available. */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap");

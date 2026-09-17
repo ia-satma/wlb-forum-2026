@@ -1,0 +1,35 @@
+:root{
+  /* 4px base, but the poster's own rhythm is 8 / 16 / 24 / 40 / 72 */
+  --space-0:0;
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:24px;
+  --space-6:32px;
+  --space-7:40px;
+  --space-8:56px;
+  --space-9:72px;
+  --space-10:96px;
+  --space-11:128px;
+
+  /* Semantic */
+  --gap-inline:var(--space-3);       /* icon to label */
+  --gap-stack:var(--space-4);
+  --gap-block:var(--space-7);        /* between poster blocks */
+  --gap-section:var(--space-10);     /* between page sections */
+  --pad-card:var(--space-5);
+  --pad-card-lg:var(--space-6);
+  --pad-button-y:14px;
+  --pad-button-x:var(--space-7);
+  --pad-field-y:12px;
+  --pad-field-x:var(--space-4);
+
+  /* Layout */
+  --page-max:1180px;
+  --page-gutter:var(--space-6);
+  --poster-gutter:130px;             /* left margin of every poster text block */
+  --rule-length:112px;               /* the orange eyebrow rule */
+  --rule-weight:4px;
+  --hairline:1px;
+}

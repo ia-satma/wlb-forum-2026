@@ -1,0 +1,51 @@
+:root{
+  /* --- Radii ---------------------------------------------------------
+     Two radii only: a pill for anything interactive, and a small 8px
+     for panels. The source artwork has no medium/large rounded cards. */
+  --radius-pill:999px;
+  --radius-panel:8px;
+  --radius-field:6px;
+  --radius-none:0;
+
+  /* --- Shadows -------------------------------------------------------
+     The poster is flat: no drop shadows anywhere. Depth on screen comes
+     from the navy overlay and translucent fills. Shadows below are the
+     minimum needed for lifted UI (menus, dialogs, sticky bars). */
+  --shadow-none:none;
+  --shadow-raised:0 2px 8px rgba(15,22,56,.18);
+  --shadow-overlay:0 24px 64px rgba(15,22,56,.45);
+  --shadow-accent:0 6px 20px rgba(255,107,2,.32);
+  --inset-hairline:inset 0 0 0 1px rgba(255,255,255,.18);
+
+  /* --- Borders ------------------------------------------------------- */
+  --border-hairline:1px solid var(--line-hairline);
+  --border-hairline-light:1px solid var(--line-hairline-light);
+  --border-accent:2px solid var(--orange-500);
+  --border-rule:4px solid var(--orange-500);
+
+  /* --- Overlays & gradients -----------------------------------------
+     THE core brand treatment: photography sits under a navy multiply
+     wash, darkening toward both edges so white type stays legible. */
+  --overlay-navy:linear-gradient(180deg,rgba(31,44,99,.94) 0%,rgba(39,55,122,.82) 38%,rgba(39,55,122,.78) 62%,rgba(31,44,99,.92) 100%); /* @kind color */
+  --overlay-navy-flat:rgba(39,55,122,.86); /* @kind color */
+  --overlay-protect-bottom:linear-gradient(180deg,rgba(31,44,99,0) 0%,rgba(31,44,99,.9) 100%); /* @kind color */
+  --overlay-protect-top:linear-gradient(180deg,rgba(31,44,99,.9) 0%,rgba(31,44,99,0) 100%); /* @kind color */
+  --blur-panel:blur(10px); /* @kind other */
+
+  /* --- Motion --------------------------------------------------------
+     Restrained: short fades and small lifts. No bounce, no spring. */
+  --ease-out:cubic-bezier(.22,.61,.36,1); /* @kind other */
+  --ease-in-out:cubic-bezier(.45,.05,.55,.95); /* @kind other */
+  --dur-fast:120ms; /* @kind other */
+  --dur-base:200ms; /* @kind other */
+  --dur-slow:360ms; /* @kind other */
+  --transition-base:all var(--dur-base) var(--ease-out); /* @kind other */
+
+  /* --- Interaction states ------------------------------------------- */
+  --state-hover-accent:var(--orange-400);
+  --state-press-accent:var(--orange-600);
+  --state-hover-veil:rgba(255,255,255,.1);
+  --state-press-scale:.98; /* @kind other */
+  --state-disabled-opacity:.4; /* @kind other */
+  --focus-ring:0 0 0 3px rgba(255,107,2,.45);
+}

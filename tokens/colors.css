@@ -1,0 +1,62 @@
+:root{
+  /* --- Base palette: navy ---------------------------------------------
+     Sampled from the source poster. The brand ground is a single navy,
+     printed as a multiply overlay over photography, so it reads as a
+     vertical range rather than one flat fill. */
+  --navy-900:#1f2c63;
+  --navy-800:#233272;
+  --navy-700:#27377a;  /* brand navy — the canonical flat value */
+  --navy-600:#2b3b80;
+  --navy-500:#304078;
+  --navy-400:#3d4b89;
+  --navy-300:#506090;
+  --navy-200:#8b95b8;
+  --navy-100:#b3bbd2;
+
+  /* --- Base palette: orange ------------------------------------------- */
+  --orange-600:#d85500;
+  --orange-500:#ff6b02;  /* brand orange — rules, icons, CTA, accent word */
+  --orange-400:#ff8330;
+  --orange-300:#ffa763;
+  --orange-100:#ffe4d1;
+  --orange-050:#fff0e9;
+
+  /* --- Base palette: neutrals ----------------------------------------- */
+  --white:#ffffff;
+  --paper:#f8f8f8;
+  --grey-200:#e4e6ee;
+  --grey-400:#a7abbd;
+  --grey-600:#5d6480;
+  --ink:#1a1f33;
+
+  /* --- Semantic: surfaces --------------------------------------------- */
+  --surface-page:var(--navy-700);
+  --surface-page-light:var(--paper);
+  --surface-card:rgba(255,255,255,.07);
+  --surface-card-solid:var(--white);
+  --surface-card-navy:var(--navy-800);
+  --surface-raised:rgba(255,255,255,.12);
+  --surface-accent:var(--orange-500);
+  --surface-accent-soft:var(--orange-050);
+
+  /* --- Semantic: text ------------------------------------------------- */
+  --text-display:var(--white);
+  --text-body:rgba(255,255,255,.92);
+  --text-muted:var(--navy-100);
+  --text-accent:var(--orange-500);
+  --text-on-accent:var(--white);
+  --text-on-light:var(--ink);
+  --text-body-on-light:var(--grey-600);
+
+  /* --- Semantic: lines ------------------------------------------------ */
+  --line-rule:var(--orange-500);          /* the orange eyebrow rule + dividers */
+  --line-hairline:rgba(255,255,255,.28);  /* vertical separators between pillars */
+  --line-hairline-light:var(--grey-200);
+  --line-focus:var(--orange-400);
+
+  /* --- Semantic: status ----------------------------------------------- */
+  --status-success:#2e9e6b;
+  --status-warning:var(--orange-500);
+  --status-danger:#d92d20;
+  --status-info:var(--navy-300);
+}
