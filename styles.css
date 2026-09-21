@@ -10,15 +10,44 @@
    preventing the fixed desktop tracks from forcing horizontal scrolling. */
 html, body { max-width: 100%; overflow-x: hidden; }
 
+/* The manifesto heading used to be wider than its grid track (809px of text
+   inside a 522px column at 1549px), so it visually collided with the quote.
+   Give the display column more room and cap the type before that happens. */
+#cultura h2 {
+  font-size: clamp(42px, 4.15vw, 64px) !important;
+  line-height: .94 !important;
+}
+
+/* Supporting copy on navy remains fully opaque. Orange stays reserved for
+   brand accents, rules and actions. */
+#programa ol > li { opacity: 1 !important; }
+footer > div:last-child > div { color: var(--white) !important; }
+
+@media (min-width: 1000px) {
+  #cultura > div {
+    grid-template-columns: minmax(0, 1.45fr) minmax(360px, 1fr) !important;
+    gap: clamp(40px, 4vw, 56px) !important;
+  }
+
+  #cultura > div > * { min-width: 0; }
+}
+
 @media (max-width: 767px) {
   :root {
     --page-gutter: 20px;
     --space-9: 56px;
     --space-10: 72px;
     --space-11: 88px;
-    --size-heading: 22px;
-    --size-subheading: 19px;
+    --size-heading: 24px;
+    --size-subheading: 20px;
+    --size-lead: 19px;
+    --size-body: 17px;
+    --size-small: 15px;
+    --size-eyebrow: 14px;
+    --size-micro: 12px;
   }
+
+  body { line-height: 1.6; }
 
   header > div {
     padding: 12px var(--page-gutter) !important;
@@ -90,13 +119,21 @@ html, body { max-width: 100%; overflow-x: hidden; }
   }
 
   h2 {
-    font-size: clamp(26px, 7.5vw, 30px) !important;
+    font-size: clamp(28px, 8vw, 34px) !important;
     line-height: 1.12 !important;
     text-wrap: balance;
   }
   h3 {
-    font-size: 22px !important;
+    font-size: 23px !important;
     line-height: 1.15 !important;
+  }
+  #cultura h2 {
+    font-size: clamp(32px, 8.8vw, 38px) !important;
+    line-height: .98 !important;
+  }
+  #cultura p { font-size: 16px !important; }
+  #cultura > div > div:last-child {
+    padding-left: var(--space-5) !important;
   }
   #registro img { max-width: min(100%, 360px); margin-inline: auto; }
 

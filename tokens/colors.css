@@ -41,8 +41,10 @@
 
   /* --- Semantic: text ------------------------------------------------- */
   --text-display:var(--white);
-  --text-body:rgba(255,255,255,.92);
-  --text-muted:var(--navy-100);
+  /* High-contrast copy on the dark brand surfaces. Keeping secondary copy
+     white avoids the blue-grey cast that made smaller text hard to read. */
+  --text-body:var(--white);
+  --text-muted:var(--white);
   --text-accent:var(--orange-500);
   --text-on-accent:var(--white);
   --text-on-light:var(--ink);
