@@ -569,7 +569,8 @@ La narrativa sigue: reconocimiento de marca → propósito → estructura del ev
 ### 15.1 Locales
 
 - `assets/logo-wlb-forum-white.png`
-- `assets/logo-imef-monterrey.png`
+- `assets/logo-wlb-imef-ejecutivo-white.png`
+- `assets/logo-imef-monterrey-white.png`
 - `assets/imagery-venue-navy.png`
 - `assets/poster-save-the-date-2026.png`
 - `assets/poster-ix-2025.png`

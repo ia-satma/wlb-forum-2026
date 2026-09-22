@@ -303,11 +303,20 @@ function Logo({
       display: 'block'
     }
   });
+  const wlbImef = /*#__PURE__*/React.createElement("img", {
+    src: assetBase + '/logo-wlb-imef-ejecutivo-white.png',
+    alt: "WLB Forum \u2014 IMEF Ejecutivo",
+    style: {
+      height,
+      width: 'auto',
+      display: 'block'
+    }
+  });
   const imef = /*#__PURE__*/React.createElement("img", {
-    src: assetBase + '/logo-imef-monterrey.png',
+    src: assetBase + '/logo-imef-monterrey-white.png',
     alt: "IMEF Ejecutivos de Finanzas \u2014 Grupo Monterrey",
     style: {
-      height: height * 0.58,
+      height: height * 0.86,
       width: 'auto',
       display: 'block'
     }
@@ -325,7 +334,7 @@ function Logo({
       gap: 'var(--space-6)',
       ...style
     }
-  }, rest), wlb, withDivider && /*#__PURE__*/React.createElement("span", {
+  }, rest), wlbImef, withDivider && /*#__PURE__*/React.createElement("span", {
     style: {
       width: 'var(--hairline)',
       height: height * 0.45,
