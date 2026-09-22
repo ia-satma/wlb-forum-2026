@@ -16,7 +16,7 @@ Sitio estático. No requiere build.
 ## Editar contenido
 Desde `index.html`:
 - Estado "Registros agotados": constante `soldOut`.
-- Fecha del countdown: `target="2026-11-05T08:30:00-06:00"`.
+- Fecha del countdown: `target="2026-11-05T15:00:00-06:00"`.
 - Navegación, ticker y textos del modal de informes.
 
 Para cambiar el programa, la cronología de ediciones o cualquier sección, edita

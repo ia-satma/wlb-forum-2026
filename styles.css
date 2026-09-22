@@ -18,6 +18,14 @@ html, body { max-width: 100%; overflow-x: hidden; }
   line-height: .94 !important;
 }
 
+/* The 2026 programme currently shows a compact approximate time window. */
+@media (max-width: 600px) {
+  #programa ol > li {
+    grid-template-columns: 88px minmax(0, 1fr) !important;
+  }
+  .enquiry-fab { display: none; }
+}
+
 /* Supporting copy on navy remains fully opaque. Orange stays reserved for
    brand accents, rules and actions. */
 #programa ol > li { opacity: 1 !important; }

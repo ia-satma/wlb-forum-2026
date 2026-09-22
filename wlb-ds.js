@@ -296,7 +296,7 @@ function Logo({
 }) {
   const wlb = /*#__PURE__*/React.createElement("img", {
     src: assetBase + '/logo-wlb-forum-white.png',
-    alt: "WLB Forum \u2014 IMEF Ejecutivo",
+    alt: "X WLB Forum \u2014 Work Life Balance",
     style: {
       height,
       width: 'auto',
@@ -1588,7 +1588,7 @@ function Navbar({
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.Logo, {
     variant: "wlb",
-    height: 44,
+    height: 54,
     assetBase: assetBase
   }), /*#__PURE__*/React.createElement("nav", {
     style: {
@@ -2640,6 +2640,13 @@ function Hero({
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
     rule: false,
+    icon: "clock",
+    primary: "15:00 \u2013 20:00",
+    secondary: "Horario aproximado",
+    iconSize: 30
+  }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
+    compact: true,
+    rule: false,
     icon: "map-pin",
     primary: "Club Industrial",
     secondary: "Monterrey, Nuevo Le\xF3n",
@@ -2697,7 +2704,7 @@ function Hero({
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: poster,
-    alt: "Save the date \u2014 WLB Forum, 10ma edici\xF3n, jueves 5 de noviembre, Club Industrial",
+    alt: "Save the date \u2014 X WLB Forum 2026, El futuro se construye en equilibrio, jueves 5 de noviembre, Club Industrial",
     style: {
       display: 'block',
       width: '100%',
@@ -2920,7 +2927,7 @@ const EDITIONS = [{
     src: 'ASSET:poster-save-the-date-2026.png',
     kind: 'Save the date'
   }],
-  note: 'Jueves 5 de noviembre · Club Industrial',
+  note: 'Jueves 5 de noviembre · Club Industrial · 15:00 a 20:00 aprox.',
   current: true
 }];
 
@@ -3628,9 +3635,8 @@ Object.assign(__ds_scope, { Gallery });
 
 // ui_kits/forum-site/Program.jsx
 try { (() => {
-/* Programme structure for the day. Formats and timing are the structure of a
-   one-day forum; session titles and speakers are "por confirmar" because none
-   were supplied — do not read them as content. */
+/* The detailed agenda is not confirmed yet. Only the approximate event window
+   supplied for the 2026 edition is shown here. */
 const EJE_ICON = {
   Persona: 'user',
   Liderazgo: 'users',
@@ -3639,74 +3645,32 @@ const EJE_ICON = {
 };
 const SESSIONS = {
   am: [{
-    time: '08:00',
-    format: 'Registro',
-    title: 'Registro y café de bienvenida',
-    eje: null
-  }, {
-    time: '09:00',
-    format: 'Apertura',
-    title: 'Bienvenida — 10 años de WLB Forum',
+    time: '15:00',
+    format: 'Inicio aproximado',
+    title: 'Inicio del WLB Forum',
     eje: null,
-    who: 'Consejo IMEF Grupo Monterrey'
+    who: 'Agenda detallada por confirmar'
   }, {
-    time: '09:20',
-    format: 'Conferencia magistral',
-    title: 'Por confirmar',
-    eje: 'Persona',
-    who: 'Ponente por confirmar'
+    time: '15–20 h',
+    format: 'Horario estimado',
+    title: 'Conferencias, paneles y espacios de encuentro',
+    eje: null,
+    who: 'Programa completo próximamente'
   }, {
-    time: '10:20',
-    format: 'Panel',
-    title: 'Por confirmar',
-    eje: 'Liderazgo',
-    who: 'Panelistas por confirmar'
-  }, {
-    time: '11:30',
-    format: 'Receso',
-    title: 'Café y networking',
-    eje: null
-  }, {
-    time: '12:00',
-    format: 'Caso',
-    title: 'Por confirmar',
-    eje: 'Impacto',
-    who: 'Ponente por confirmar'
-  }],
-  pm: [{
-    time: '13:15',
-    format: 'Comida',
-    title: 'Comida',
-    eje: null
-  }, {
-    time: '14:45',
-    format: 'Conferencia magistral',
-    title: 'Por confirmar',
-    eje: 'Futuro',
-    who: 'Ponente por confirmar'
-  }, {
-    time: '15:45',
-    format: 'Mesa de cierre',
-    title: 'Lo que nos llevamos de la 10ma edición',
-    eje: 'Liderazgo',
-    who: 'Por confirmar'
-  }, {
-    time: '16:45',
-    format: 'Cierre',
-    title: 'Agradecimientos y foto de grupo',
+    time: '20:00',
+    format: 'Cierre aproximado',
+    title: 'Cierre del evento',
     eje: null
   }]
 };
 const SLOT_LABEL = {
-  am: 'Mañana',
-  pm: 'Tarde'
+  am: 'Horario estimado'
 };
 function Program({
   style,
   allSlots = false
 }) {
-  const [slot, setSlot] = React.useState('am');
-  const slots = allSlots ? ['am', 'pm'] : [slot];
+  const slots = ['am'];
   return /*#__PURE__*/React.createElement("section", {
     id: "programa",
     style: {
@@ -3735,17 +3699,7 @@ function Program({
     eyebrow: "Programa",
     title: "Programa del",
     accent: "evento",
-    lead: "Un d\xEDa completo, del registro a la mesa de cierre. Los t\xEDtulos y ponentes se publican conforme se confirman."
-  }), !allSlots && /*#__PURE__*/React.createElement(__ds_scope.Tabs, {
-    items: [{
-      id: 'am',
-      label: 'Mañana'
-    }, {
-      id: 'pm',
-      label: 'Tarde'
-    }],
-    value: slot,
-    onChange: setSlot
+    lead: "Horario estimado de 15:00 a 20:00. La agenda detallada, los t\xEDtulos y los ponentes se publicar\xE1n conforme se confirmen."
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
@@ -3769,16 +3723,9 @@ function Program({
     name: ic,
     size: 16,
     color: "var(--orange-500)"
-  }), k))), /*#__PURE__*/React.createElement(__ds_scope.Button, {
-    variant: "secondary",
-    size: "sm",
-    href: "#",
-    icon: /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-      name: "download",
-      size: 14,
-      color: "currentColor"
-    })
-  }, "Descargar programa")), /*#__PURE__*/React.createElement("div", {
+  }), k))), /*#__PURE__*/React.createElement(__ds_scope.Badge, {
+    tone: "outline"
+  }, "Agenda en preparaci\xF3n")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       flexDirection: 'column',
@@ -4062,7 +4009,7 @@ function Register({
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: assetBase + '/poster-save-the-date-2026.png',
-    alt: "Save the date \u2014 WLB Forum 2026",
+    alt: "Save the date \u2014 X WLB Forum 2026, El futuro se construye en equilibrio",
     style: {
       display: 'block',
       width: '100%',
@@ -4093,8 +4040,8 @@ function Register({
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
     icon: "clock",
-    primary: "08:30 \u2013 17:00",
-    secondary: "Registro desde las 08:00",
+    primary: "15:00 \u2013 20:00",
+    secondary: "Horario aproximado",
     iconSize: 26
   }), /*#__PURE__*/React.createElement("p", {
     style: {
@@ -4122,7 +4069,7 @@ const COLS = [{
   links: [['El foro', '#foro'], ['Cuatro ejes', '#ejes'], ['Programa', '#programa'], ['Esta edición', '#expectativas']]
 }, {
   title: 'Asiste',
-  links: [['Registro', '#registro'], ['Accesos', '#accesos'], ['Patrocinio', '#patrocinio'], ['Galería', '#galeria']]
+  links: [['Registro', '#registro'], ['Accesos', '#accesos'], ['Galería', '#galeria']]
 }];
 function SiteFooter({
   assetBase = '../../assets',
@@ -4458,7 +4405,7 @@ function VenueAccess({
     eyebrow: "Accesos",
     title: "Informaci\xF3n de accesos",
     accent: "presenciales",
-    lead: "El foro se lleva a cabo en el Club Industrial. Llega desde las 08:00 para registrarte con calma."
+    lead: "El foro se lleva a cabo en el Club Industrial. El horario estimado es de 15:00 a 20:00."
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
@@ -4521,8 +4468,8 @@ function VenueAccess({
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
     icon: "clock",
-    primary: "08:00 \u2013 17:00",
-    secondary: "Registro desde las 08:00",
+    primary: "15:00 \u2013 20:00",
+    secondary: "Horario aproximado",
     iconSize: 26
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
