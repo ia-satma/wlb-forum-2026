@@ -4385,9 +4385,11 @@ try { (() => {
    published on the 2025 page; confirm for 2026. */
 const MAPS = 'https://www.google.com/maps/search/?api=1&query=Club+Industrial+Av.+Parte+Aguas+698+San+Pedro+Garza+Garc%C3%ADa';
 function VenueAccess({
-  photo = __ds_scope.PHOTOS.l1,
+  assetBase = '../../assets',
+  photo,
   style
 }) {
+  const venuePhoto = photo || assetBase + '/venue-foro-imef-2026-woman.jpg';
   return /*#__PURE__*/React.createElement("section", {
     id: "accesos",
     style: {
@@ -4526,12 +4528,13 @@ function VenueAccess({
       background: 'var(--navy-900)'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: photo,
-    alt: "Sede del foro",
+    src: venuePhoto,
+    alt: "Asistente conversando durante un foro de IMEF",
     style: {
       width: '100%',
       height: '100%',
       objectFit: 'cover',
+      objectPosition: '40% center',
       filter: 'saturate(.75)'
     }
   }), /*#__PURE__*/React.createElement("span", {

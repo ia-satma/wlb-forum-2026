@@ -573,6 +573,7 @@ La narrativa sigue: reconocimiento de marca → propósito → estructura del ev
 - `assets/logo-imef-monterrey-white.png`
 - `assets/imagery-venue-navy.png`
 - `assets/poster-save-the-date-2026.png`
+- `assets/venue-foro-imef-2026-woman.jpg`
 - `assets/poster-ix-2025.png`
 
 ### 15.2 Remotos
