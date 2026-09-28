@@ -2651,7 +2651,6 @@ function Hero({
     rule: false,
     icon: "clock",
     primary: "15:00 \u2013 19:30",
-    secondary: "Horario aproximado",
     iconSize: 30
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
@@ -2936,7 +2935,7 @@ const EDITIONS = [{
     src: 'ASSET:poster-save-the-date-2026.png',
     kind: 'Save the date'
   }],
-  note: 'Jueves 5 de noviembre · Club Industrial · 15:00 a 19:30 aprox.',
+  note: 'Jueves 5 de noviembre · Club Industrial · 15:00 a 19:30',
   current: true
 }];
 
@@ -3644,7 +3643,7 @@ Object.assign(__ds_scope, { Gallery });
 
 // ui_kits/forum-site/Program.jsx
 try { (() => {
-/* The detailed agenda is not confirmed yet. Only the approximate event window
+/* The detailed agenda is not confirmed yet. The confirmed event window
    supplied for the 2026 edition is shown here. */
 const EJE_ICON = {
   Persona: 'user',
@@ -3655,25 +3654,25 @@ const EJE_ICON = {
 const SESSIONS = {
   am: [{
     time: '15:00',
-    format: 'Inicio aproximado',
+    format: 'Inicio',
     title: 'Inicio del WLB Forum',
     eje: null,
     who: 'Agenda detallada por confirmar'
   }, {
-    time: '15–20 h',
-    format: 'Horario estimado',
+    time: '15:00–19:30',
+    format: 'Horario',
     title: 'Conferencias, paneles y espacios de encuentro',
     eje: null,
     who: 'Programa completo próximamente'
   }, {
     time: '19:30',
-    format: 'Cierre aproximado',
+    format: 'Cierre',
     title: 'Cierre del evento',
     eje: null
   }]
 };
 const SLOT_LABEL = {
-  am: 'Horario estimado'
+  am: 'Horario'
 };
 function Program({
   style,
@@ -3708,7 +3707,7 @@ function Program({
     eyebrow: "Programa",
     title: "Programa del",
     accent: "evento",
-    lead: "Horario estimado de 15:00 a 19:30. La agenda detallada, los t\xEDtulos y los ponentes se publicar\xE1n conforme se confirmen."
+    lead: "Horario de 15:00 a 19:30. La agenda detallada, los t\xEDtulos y los ponentes se publicar\xE1n conforme se confirmen."
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
@@ -3863,34 +3862,6 @@ function Register({
   assetBase = '../../assets',
   style
 }) {
-  const [form, setForm] = React.useState({
-    nombre: '',
-    correo: '',
-    empresa: '',
-    area: 'fin'
-  });
-  const [pase, setPase] = React.useState('socio');
-  const [consent, setConsent] = React.useState(false);
-  const [reminder, setReminder] = React.useState(true);
-  const [done, setDone] = React.useState(false);
-  const [error, setError] = React.useState('');
-  const set = k => e => setForm({
-    ...form,
-    [k]: e.target.value
-  });
-  const submit = e => {
-    e.preventDefault();
-    if (!form.nombre || !form.correo.includes('@')) {
-      setError('Revisa tu nombre y tu correo.');
-      return;
-    }
-    if (!consent) {
-      setError('Necesitamos tu consentimiento para continuar.');
-      return;
-    }
-    setError('');
-    setDone(true);
-  };
   return /*#__PURE__*/React.createElement("section", {
     id: "registro",
     style: {
@@ -3904,110 +3875,32 @@ function Register({
       padding: 'var(--space-11) var(--page-gutter)',
       display: 'grid',
       gridTemplateColumns: 'minmax(0,1.3fr) minmax(280px,1fr)',
-      gap: 'var(--space-9)'
+      gap: 'var(--space-9)',
+      alignItems: 'center'
     }
-  }, /*#__PURE__*/React.createElement("form", {
-    onSubmit: submit,
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 'var(--space-5)'
-    }
-  }, /*#__PURE__*/React.createElement(__ds_scope.SectionHeading, {
-    eyebrow: "Registro",
-    title: "Aparta tu",
-    accent: "lugar",
-    lead: "Cupo limitado. Te confirmamos por correo en menos de 24 horas."
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))',
-      gap: 'var(--space-5)'
-    }
-  }, /*#__PURE__*/React.createElement(__ds_scope.Field, {
-    label: "Nombre",
-    required: true,
-    htmlFor: "r-n"
-  }, /*#__PURE__*/React.createElement(__ds_scope.Input, {
-    id: "r-n",
-    value: form.nombre,
-    onChange: set('nombre'),
-    placeholder: "Nombre y apellido"
-  })), /*#__PURE__*/React.createElement(__ds_scope.Field, {
-    label: "Correo corporativo",
-    required: true,
-    htmlFor: "r-c"
-  }, /*#__PURE__*/React.createElement(__ds_scope.Input, {
-    id: "r-c",
-    type: "email",
-    value: form.correo,
-    onChange: set('correo'),
-    placeholder: "nombre@empresa.com"
-  })), /*#__PURE__*/React.createElement(__ds_scope.Field, {
-    label: "Empresa",
-    htmlFor: "r-e"
-  }, /*#__PURE__*/React.createElement(__ds_scope.Input, {
-    id: "r-e",
-    value: form.empresa,
-    onChange: set('empresa'),
-    placeholder: "Grupo Monterrey"
-  })), /*#__PURE__*/React.createElement(__ds_scope.Field, {
-    label: "\xC1rea",
-    htmlFor: "r-a"
-  }, /*#__PURE__*/React.createElement(__ds_scope.Select, {
-    id: "r-a",
-    value: form.area,
-    onChange: set('area'),
-    options: [{
-      value: 'fin',
-      label: 'Finanzas'
-    }, {
-      value: 'dir',
-      label: 'Dirección general'
-    }, {
-      value: 'rh',
-      label: 'Capital humano'
-    }, {
-      value: 'otro',
-      label: 'Otra'
-    }]
-  }))), /*#__PURE__*/React.createElement(__ds_scope.Field, {
-    label: "Tipo de pase"
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       flexDirection: 'column',
-      gap: 'var(--space-3)',
-      marginTop: 4
+      alignItems: 'flex-start',
+      gap: 'var(--space-6)'
     }
-  }, /*#__PURE__*/React.createElement(__ds_scope.Radio, {
-    name: "pase",
-    label: "Socio IMEF",
-    description: "Incluye comida y materiales.",
-    checked: pase === 'socio',
-    onChange: () => setPase('socio')
-  }), /*#__PURE__*/React.createElement(__ds_scope.Radio, {
-    name: "pase",
-    label: "Invitado",
-    description: "Acceso general al foro.",
-    checked: pase === 'invitado',
-    onChange: () => setPase('invitado')
-  }))), /*#__PURE__*/React.createElement(__ds_scope.Checkbox, {
-    label: "Acepto recibir informaci\xF3n del IMEF Grupo Monterrey.",
-    checked: consent,
-    onChange: e => setConsent(e.target.checked)
-  }), /*#__PURE__*/React.createElement(__ds_scope.Switch, {
-    label: "Recordatorio 24 h antes del foro",
-    checked: reminder,
-    onChange: e => setReminder(e.target.checked)
-  }), error && /*#__PURE__*/React.createElement(__ds_scope.Toast, {
-    tone: "danger",
-    onDismiss: () => setError('')
-  }, error), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(__ds_scope.Button, {
+  }, /*#__PURE__*/React.createElement(__ds_scope.SectionHeading, {
+    eyebrow: "Registro",
+    title: "Aparta tu",
+    accent: "lugar"
+  }), /*#__PURE__*/React.createElement(__ds_scope.Button, {
     size: "lg",
-    as: "button",
-    onClick: submit
-  }, "Confirmar registro"))), /*#__PURE__*/React.createElement(__ds_scope.Card, {
+    variant: "primary",
+    type: "button",
+    style: {
+      minWidth: 'min(100%, 340px)',
+      minHeight: 80,
+      padding: '24px 56px',
+      fontSize: 'clamp(20px, 2.5vw, 30px)',
+      letterSpacing: '.08em'
+    }
+  }, "Regístrate")), /*#__PURE__*/React.createElement(__ds_scope.Card, {
     surface: "glass",
     accentTop: true,
     style: {
@@ -4050,7 +3943,6 @@ function Register({
     compact: true,
     icon: "clock",
     primary: "15:00 \u2013 19:30",
-    secondary: "Horario aproximado",
     iconSize: 26
   }), /*#__PURE__*/React.createElement("p", {
     style: {
@@ -4059,14 +3951,7 @@ function Register({
       fontSize: 'var(--size-small)',
       color: 'var(--text-muted)'
     }
-  }, "Informes: pquiroga@imefmty.com"))), /*#__PURE__*/React.createElement(__ds_scope.Dialog, {
-    open: done,
-    title: "Registro confirmado",
-    onClose: () => setDone(false),
-    footer: /*#__PURE__*/React.createElement(__ds_scope.Button, {
-      onClick: () => setDone(false)
-    }, "Listo")
-  }, "Te enviamos el pase a ", form.correo || 'tu correo', ". Nos vemos el jueves 5 de noviembre en el Club Industrial."));
+  }, "Informes: pquiroga@imefmty.com"))));
 }
 Object.assign(__ds_scope, { Register });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/forum-site/Register.jsx", error: String((e && e.message) || e) }); }
@@ -4416,7 +4301,7 @@ function VenueAccess({
     eyebrow: "Accesos",
     title: "Informaci\xF3n de accesos",
     accent: "presenciales",
-    lead: "El foro se lleva a cabo en el Club Industrial. El horario estimado es de 15:00 a 19:30."
+    lead: "El foro se lleva a cabo en el Club Industrial. El horario es de 15:00 a 19:30."
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
@@ -4480,7 +4365,6 @@ function VenueAccess({
     compact: true,
     icon: "clock",
     primary: "15:00 \u2013 19:30",
-    secondary: "Horario aproximado",
     iconSize: 26
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
