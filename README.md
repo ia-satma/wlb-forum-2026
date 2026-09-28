@@ -26,3 +26,14 @@ La fuente no se incluye aquí para que el repositorio quede como sitio estático
 
 Las fotos de la galería se cargan desde el CDN de wlb.imefmty.com — descárgalas
 a `assets/` para producción.
+
+## Usar en Replit
+
+Esta landing está preparada para importarse directamente desde GitHub o para subir la carpeta completa a Replit.
+
+- Replit usará `.replit` para iniciar un servidor estático en el puerto `3000`.
+- No hay dependencias que instalar ni proceso de build.
+- Abre la pestaña **Preview** para ver la landing.
+- Conserva la estructura de carpetas: `index.html`, `styles.css`, `tokens/`, `assets/` y `wlb-ds.js` deben permanecer en la raíz.
+
+Para importar el proyecto desde GitHub, usa el repositorio `ia-satma/wlb-forum-2026`.
