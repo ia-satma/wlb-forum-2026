@@ -2650,7 +2650,7 @@ function Hero({
     compact: true,
     rule: false,
     icon: "clock",
-    primary: "15:00 \u2013 20:00",
+    primary: "15:00 \u2013 19:30",
     secondary: "Horario aproximado",
     iconSize: 30
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
@@ -2936,7 +2936,7 @@ const EDITIONS = [{
     src: 'ASSET:poster-save-the-date-2026.png',
     kind: 'Save the date'
   }],
-  note: 'Jueves 5 de noviembre · Club Industrial · 15:00 a 20:00 aprox.',
+  note: 'Jueves 5 de noviembre · Club Industrial · 15:00 a 19:30 aprox.',
   current: true
 }];
 
@@ -3666,7 +3666,7 @@ const SESSIONS = {
     eje: null,
     who: 'Programa completo próximamente'
   }, {
-    time: '20:00',
+    time: '19:30',
     format: 'Cierre aproximado',
     title: 'Cierre del evento',
     eje: null
@@ -3708,7 +3708,7 @@ function Program({
     eyebrow: "Programa",
     title: "Programa del",
     accent: "evento",
-    lead: "Horario estimado de 15:00 a 20:00. La agenda detallada, los t\xEDtulos y los ponentes se publicar\xE1n conforme se confirmen."
+    lead: "Horario estimado de 15:00 a 19:30. La agenda detallada, los t\xEDtulos y los ponentes se publicar\xE1n conforme se confirmen."
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
@@ -4049,7 +4049,7 @@ function Register({
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
     icon: "clock",
-    primary: "15:00 \u2013 20:00",
+    primary: "15:00 \u2013 19:30",
     secondary: "Horario aproximado",
     iconSize: 26
   }), /*#__PURE__*/React.createElement("p", {
@@ -4416,7 +4416,7 @@ function VenueAccess({
     eyebrow: "Accesos",
     title: "Informaci\xF3n de accesos",
     accent: "presenciales",
-    lead: "El foro se lleva a cabo en el Club Industrial. El horario estimado es de 15:00 a 20:00."
+    lead: "El foro se lleva a cabo en el Club Industrial. El horario estimado es de 15:00 a 19:30."
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
@@ -4479,7 +4479,7 @@ function VenueAccess({
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
     icon: "clock",
-    primary: "15:00 \u2013 20:00",
+    primary: "15:00 \u2013 19:30",
     secondary: "Horario aproximado",
     iconSize: 26
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
@@ -4575,7 +4575,7 @@ Object.assign(__ds_scope, { VenueAccess });
 try { (() => {
 /* Teaser block. Embeds the Vimeo teaser published on wlb.imefmty.com directly —
    the player is visible on load; the frame carries the orange rule. */
-const TEASER = 'https://player.vimeo.com/video/1120290882?autoplay=0&mute=0&title=0&sidedock=0&byline=0&color=ff6b02';
+const TEASER = 'https://player.vimeo.com/video/1229065857?autoplay=0&mute=0&title=0&sidedock=0&byline=0&color=ff6b02';
 function VideoBlock({
   src = TEASER,
   eyebrow = 'Teaser 2026',
@@ -4615,7 +4615,7 @@ function VideoBlock({
   }), /*#__PURE__*/React.createElement(__ds_scope.Button, {
     variant: "secondary",
     size: "sm",
-    href: "https://vimeo.com/1120290882",
+    href: "https://vimeo.com/1229065857?fl=ip&fe=ec&share=copy",
     target: "_blank",
     rel: "noreferrer",
     iconAfter: /*#__PURE__*/React.createElement(__ds_scope.Icon, {
