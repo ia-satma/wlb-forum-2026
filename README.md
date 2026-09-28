@@ -31,9 +31,14 @@ a `assets/` para producción.
 
 Esta landing está preparada para importarse directamente desde GitHub o para subir la carpeta completa a Replit.
 
-- Replit usará `.replit` para iniciar un servidor estático en el puerto `3000`.
-- No hay dependencias que instalar ni proceso de build.
+- Replit usará `.replit` para iniciar `npm start` en el puerto `3000`.
+- El servidor está en `server.js` y usa únicamente módulos nativos de Node.js.
+- No hay dependencias externas que instalar ni proceso de build.
 - Abre la pestaña **Preview** para ver la landing.
 - Conserva la estructura de carpetas: `index.html`, `styles.css`, `tokens/`, `assets/` y `wlb-ds.js` deben permanecer en la raíz.
 
 Para importar el proyecto desde GitHub, usa el repositorio `ia-satma/wlb-forum-2026`.
+
+### Publicar en Replit
+
+En **Publishing**, selecciona **Static** y usa `/` como directorio público cuando quieras servir directamente los archivos estáticos. Si usas un despliegue que ejecute un comando, `.replit` ya configura `npm start` y expone el puerto `3000`.
