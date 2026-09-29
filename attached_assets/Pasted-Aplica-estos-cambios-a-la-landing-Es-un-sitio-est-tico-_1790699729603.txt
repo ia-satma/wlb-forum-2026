@@ -1,0 +1,30 @@
+Aplica estos cambios a la landing. Es un sitio estático: no instales nada ni cambies la estructura. Las secciones viven en wlb-ds.js (bundle compilado): edítalo directo con reemplazos exactos. Algunos textos pueden estar con escapes (\u2014, \xF1, \xF3).
+
+Ya subí 14 fotos a assets/: foro-vi-2022-01.jpg, foro-vi-2022-02.jpg y foro-ix-2025-01.jpg a foro-ix-2025-12.jpg. Verifica que estén.
+
+1) Hero (función Hero): justo debajo del Logo con variant "lockup" (height 76), dentro del mismo div, agrega un <p> con el texto "Presentado por " seguido de un <span> "IMEF Grupo Monterrey". Estilo del p: margin 'var(--space-3) 0 0', fontFamily var(--font-display), fontWeight var(--weight-semibold), fontSize var(--size-small), letterSpacing var(--track-eyebrow), textTransform uppercase, color var(--text-body). Estilo del span: color var(--orange-500), fontWeight var(--weight-black).
+
+2) Expectations, arreglo BLOCKS, cuarta tarjeta:
+- title: 'Un enfoque multidisciplinario' → 'Conexión en un enfoque multidisciplinario'
+- body → 'El Foro se ha posicionado como un espacio de networking y conexiones de alto valor, en el que interactúan diferentes industrias a nivel nacional.'
+
+3) VenueAccess:
+- venuePhoto: '/venue-foro-imef-2026-woman.jpg' → '/foro-vi-2022-01.jpg'
+- en el figure de esa foto: aspectRatio '4 / 5' → '4 / 3'
+- en el img: objectPosition '40% center' → 'center 35%'; alt → "Asistentes del VI Work Life Balance Forum"
+
+4) Photos (arreglo EDITIONS):
+- VI edición: photos: [] → ['./assets/foro-vi-2022-01.jpg', './assets/foro-vi-2022-02.jpg']; note → 'Jueves 24 de noviembre · EGADE Business School'
+- VIII edición: note 'Cartel y programa identificados; fecha y sede por confirmar' → ''
+- IX edición: photos: [] → ['./assets/foro-ix-2025-01.jpg' … './assets/foro-ix-2025-12.jpg'] en ese orden
+
+5) Gallery:
+- const shown = __ds_scope.EDITIONS; → const shown = __ds_scope.EDITIONS.filter(e => e.photos.length || e.artwork.length);
+- lead "Ordenada por el numeral impreso en cada cartel — de la III a la X — con el año que ese cartel fija." → "Diez ediciones transformando la manera de vivir, trabajar y liderar."
+- 'Aquí van los momentos de la décima edición.' : 'Fotografía del evento por publicar.' → 'Muy pronto, los momentos de la décima edición.' : ''
+
+6) index.html:
+- dentro del <style> agrega: #galeria-archivo{display:none!important}
+- cambia wlb-ds.js?v=registration-cta-20260928-1 por wlb-ds.js?v=cambios-20260929-1
+
+No cambies nada más. Revisa en Preview (escritorio y celular) que no haya errores en consola y que en la galería ya no aparezcan "por asignar", "por publicar" ni "por confirmar". Si el repo de GitHub ia-satma/wlb-forum-2026 está conectado, haz commit y push. Luego republica.
