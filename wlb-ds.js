@@ -2413,8 +2413,8 @@ const BLOCKS = [{
   title: 'Temática relevante',
   body: 'Vas a escuchar historias de éxito relatadas por destacados profesionistas con probada experiencia en el desarrollo organizacional y humano.'
 }, {
-  title: 'Un enfoque multidisciplinario',
-  body: 'El Foro se ha posicionado como un espacio en el que interactúan diferentes industrias a nivel nacional.'
+  title: 'Conexión en un enfoque multidisciplinario',
+  body: 'El Foro se ha posicionado como un espacio de networking y conexiones de alto valor, en el que interactúan diferentes industrias a nivel nacional.'
 }];
 function Expectations({
   style
@@ -2572,7 +2572,22 @@ function Hero({
     variant: "lockup",
     height: 76,
     assetBase: assetBase
-  })), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 'var(--space-3) 0 0',
+      fontFamily: 'var(--font-display)',
+      fontWeight: 'var(--weight-semibold)',
+      fontSize: 'var(--size-small)',
+      letterSpacing: 'var(--track-eyebrow)',
+      textTransform: 'uppercase',
+      color: 'var(--text-body)'
+    }
+  }, "Presentado por ", /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'var(--orange-500)',
+      fontWeight: 'var(--weight-black)'
+    }
+  }, "IMEF Grupo Monterrey"))), /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'relative',
       maxWidth: 'var(--page-max)',
@@ -2876,7 +2891,7 @@ const EDITIONS = [{
     src: PHOTOS.p6,
     kind: 'Programa'
   }],
-  note: 'Jueves 24 de noviembre · EGADE Business School · 14:00 h · orden cartel/programa por confirmar'
+  note: 'Jueves 24 de noviembre · EGADE Business School'
 }, {
   year: '2023',
   numeral: 'VII',
@@ -2904,7 +2919,7 @@ const EDITIONS = [{
     src: PHOTOS.p2,
     kind: 'Programa'
   }],
-  note: 'Cartel y programa identificados; fecha y sede por confirmar'
+  note: ''
 }, {
   year: '2025',
   numeral: 'IX',
@@ -3311,7 +3326,7 @@ try { (() => {
 /* "GALERÍA — Recordemos algunos momentos del Work-Life Balance Forum 2019,
    2020, 2021, 2023, 2024", laid out as a chronology: one row per edition,
    the year on the orange timeline, that edition's photographs beside it. */
-const shown = __ds_scope.EDITIONS; // every edition gets a row, so each chronology anchor has a target
+const shown = __ds_scope.EDITIONS.filter(e => e.photos.length || e.artwork.length);
 
 const resolve = (src, assetBase) => src.startsWith('ASSET:') ? assetBase + '/' + src.slice(6) : src;
 function Gallery({
@@ -3337,7 +3352,7 @@ function Gallery({
     eyebrow: "Galer\xEDa",
     title: "Recordemos algunos",
     accent: "momentos",
-    lead: "Ordenada por el numeral impreso en cada cartel \u2014 de la III a la X \u2014 con el a\xF1o que ese cartel fija."
+    lead: "Diez ediciones transformando la manera de vivir, trabajar y liderar."
   }), /*#__PURE__*/React.createElement("ol", {
     style: {
       listStyle: 'none',
@@ -3531,7 +3546,7 @@ function Gallery({
       fontSize: 'var(--size-small)',
       color: 'var(--text-muted)'
     }
-  }, e.current ? 'Aquí van los momentos de la décima edición.' : 'Fotografía del evento por publicar.')) : /*#__PURE__*/React.createElement("div", {
+  }, e.current ? 'Muy pronto, los momentos de la décima edición.' : '')) : /*#__PURE__*/React.createElement("div", {
     style: {
       alignSelf: 'center',
       display: 'flex',
