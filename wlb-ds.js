@@ -2672,7 +2672,7 @@ function Hero({
     rule: false,
     icon: "map-pin",
     primary: "Club Industrial",
-    secondary: "Monterrey, Nuevo Le\xF3n",
+    secondary: "San Pedro Garza Garc\xEDa, N.L.",
     iconSize: 30
   }))), /*#__PURE__*/React.createElement(__ds_scope.Reveal, {
     delay: 420
@@ -3061,11 +3061,11 @@ function CultureStatement({
       textTransform: 'uppercase',
       color: 'var(--white)'
     }
-  }, "\xA1Transformando", /*#__PURE__*/React.createElement("br", null), "la cultura", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
+  }, "Transformando", /*#__PURE__*/React.createElement("br", null), "la cultura", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
     style: {
       color: 'var(--orange-500)'
     }
-  }, "en el trabajo!")), /*#__PURE__*/React.createElement("div", {
+  }, "en el trabajo")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       flexDirection: 'column',
@@ -3658,32 +3658,38 @@ Object.assign(__ds_scope, { Gallery });
 
 // ui_kits/forum-site/Program.jsx
 try { (() => {
-/* The detailed agenda is not confirmed yet. The confirmed event window
-   supplied for the 2026 edition is shown here. */
-const EJE_ICON = {
-  Persona: 'user',
-  Liderazgo: 'users',
-  Impacto: 'target',
-  Futuro: 'leaf'
-};
+/* Confirmed session times and titles; speakers will be announced later. */
 const SESSIONS = {
   am: [{
-    time: '15:00',
-    format: 'Inicio',
-    title: 'Inicio del WLB Forum',
-    eje: null,
-    who: 'Agenda detallada por confirmar'
+    time: '15:00–15:10',
+    title: 'Bienvenida'
   }, {
-    time: '15:00–19:30',
-    format: 'Horario',
-    title: 'Conferencias, paneles y espacios de encuentro',
-    eje: null,
-    who: 'Programa completo próximamente'
+    time: '15:10–16:00',
+    title: 'La visión del empresario más allá de la rentabilidad'
+  }, {
+    time: '16:05–16:35',
+    title: 'Intervención especial'
+  }, {
+    time: '16:35–16:45',
+    title: 'Receso'
+  }, {
+    time: '16:45–17:35',
+    title: 'Panel: Decisiones que tocan vidas'
+  }, {
+    time: '17:35–18:10',
+    title: 'El rol del empresario en la atención del capital humano'
+  }, {
+    time: '18:10–18:50',
+    title: 'Liderazgo para el florecimiento humano'
+  }, {
+    time: '18:50–19:20',
+    title: 'Conversación'
+  }, {
+    time: '19:20–19:30',
+    title: 'Cierre'
   }, {
     time: '19:30',
-    format: 'Cierre',
-    title: 'Cierre del evento',
-    eje: null
+    title: 'Coctel de networking'
   }]
 };
 const SLOT_LABEL = {
@@ -3722,33 +3728,8 @@ function Program({
     eyebrow: "Programa",
     title: "Programa del",
     accent: "evento",
-    lead: "Horario de 15:00 a 19:30. La agenda detallada, los t\xEDtulos y los ponentes se publicar\xE1n conforme se confirmen."
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 'var(--space-3)'
-    }
-  }, Object.entries(EJE_ICON).map(([k, ic]) => /*#__PURE__*/React.createElement("span", {
-    key: k,
-    style: {
-      display: 'inline-flex',
-      alignItems: 'center',
-      gap: 10,
-      fontFamily: 'var(--font-display)',
-      fontWeight: 'var(--weight-bold)',
-      fontSize: 'var(--size-micro)',
-      letterSpacing: 'var(--track-label)',
-      textTransform: 'uppercase',
-      color: 'var(--text-muted)'
-    }
-  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: ic,
-    size: 16,
-    color: "var(--orange-500)"
-  }), k))), /*#__PURE__*/React.createElement(__ds_scope.Badge, {
-    tone: "outline"
-  }, "Agenda en preparaci\xF3n")), /*#__PURE__*/React.createElement("div", {
+    lead: "Horario de 15:00 a 19:30. Los ponentes se anunciar\xE1n pr\xF3ximamente."
+  })), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       flexDirection: 'column',
@@ -3788,7 +3769,7 @@ function Program({
       padding: 'var(--space-5) 0 var(--space-5) var(--space-6)',
       position: 'relative',
       borderBottom: i === SESSIONS[sl].length - 1 ? 'none' : 'var(--border-hairline)',
-      opacity: s.eje || s.who ? 1 : .72,
+      opacity: 1,
       breakInside: 'avoid'
     }
   }, /*#__PURE__*/React.createElement("span", {
@@ -3811,13 +3792,15 @@ function Program({
       color: 'var(--orange-500)',
       fontVariantNumeric: 'tabular-nums'
     }
-  }, s.time), /*#__PURE__*/React.createElement("div", {
+  }, s.time.split('–').map((part, index) => /*#__PURE__*/React.createElement(React.Fragment, {
+    key: index
+  }, index > 0 && '–', index > 0 && /*#__PURE__*/React.createElement("wbr", null), part))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       flexDirection: 'column',
       gap: 6
     }
-  }, /*#__PURE__*/React.createElement("span", {
+  }, s.format && /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: 'var(--font-display)',
       fontWeight: 'var(--weight-bold)',
@@ -4284,6 +4267,51 @@ try { (() => {
 /* "INFORMACIÓN DE ACCESOS PRESENCIALES". Address is the Club Industrial address
    published on the 2025 page; confirm for 2026. */
 const MAPS = 'https://www.google.com/maps/search/?api=1&query=Club+Industrial+Av.+Parte+Aguas+698+San+Pedro+Garza+Garc%C3%ADa';
+function downloadWLBCalendar() {
+  const escapeText = value => value.replace(/\\/g, '\\\\').replace(/\r?\n/g, '\\n').replace(/;/g, '\\;').replace(/,/g, '\\,');
+  const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
+  const lines = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//IMEF Grupo Monterrey//WLB Forum 2026//ES',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    'UID:' + crypto.randomUUID() + '@imefwlb-forum-2026.replit.app',
+    'DTSTAMP:' + stamp,
+    'DTSTART:20261105T210000Z',
+    'DTEND:20261106T013000Z',
+    'SUMMARY:' + escapeText('X Work Life Balance Forum 2026 · IMEF Grupo Monterrey'),
+    'LOCATION:' + escapeText('Club Industrial, Av. Parte Aguas 698, Los Arcángeles, 66266 San Pedro Garza García, N.L.'),
+    'DESCRIPTION:' + escapeText('https://imefwlb-forum-2026.replit.app\nInformes: pquiroga@imefmty.com'),
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ];
+  // RFC 5545: CRLF and folding at 75 UTF-8 octets, without splitting characters.
+  const encoder = new TextEncoder();
+  const fold = line => {
+    let result = '', bytes = 0;
+    for (const char of line) {
+      const size = encoder.encode(char).length;
+      if (bytes + size > 75) {
+        result += '\r\n ';
+        bytes = 1;
+      }
+      result += char;
+      bytes += size;
+    }
+    return result;
+  };
+  const blob = new Blob([lines.map(fold).join('\r\n') + '\r\n'], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'wlb-forum-2026.ics';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+}
 function VenueAccess({
   assetBase = '../../assets',
   photo,
@@ -4411,7 +4439,7 @@ function VenueAccess({
     })
   }, "C\xF3mo llegar"), /*#__PURE__*/React.createElement(__ds_scope.Button, {
     variant: "ghost",
-    href: "#",
+    onClick: downloadWLBCalendar,
     icon: /*#__PURE__*/React.createElement(__ds_scope.Icon, {
       name: "calendar-plus",
       size: 16,
