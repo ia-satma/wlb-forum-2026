@@ -16,6 +16,7 @@ const types = {
   '.webp': 'image/webp',
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
+  '.mp4': 'video/mp4',
   '.txt': 'text/plain; charset=utf-8'
 };
 

@@ -18,17 +18,12 @@ html, body { max-width: 100%; overflow-x: hidden; }
   line-height: .94 !important;
 }
 
-/* The 2026 programme currently shows a compact approximate time window. */
 @media (max-width: 600px) {
-  #programa ol > li {
-    grid-template-columns: 88px minmax(0, 1fr) !important;
-  }
   .enquiry-fab { display: none; }
 }
 
 /* Supporting copy on navy remains fully opaque. Orange stays reserved for
    brand accents, rules and actions. */
-#programa ol > li { opacity: 1 !important; }
 footer > div:last-child > div { color: var(--white) !important; }
 
 @media (min-width: 1000px) {
@@ -103,18 +98,18 @@ footer > div:last-child > div { color: var(--white) !important; }
     padding: var(--space-10) var(--page-gutter) !important;
   }
   #programa > div > div:first-child { position: static !important; }
-  #programa ol > li {
-    grid-template-columns: 70px minmax(0, 1fr) !important;
-    gap: var(--space-3) !important;
-    padding-left: var(--space-5) !important;
-  }
-  #programa ol > li > span:nth-child(2) { font-size: 22px !important; }
-
   #expectativas [style*="grid-template-columns"],
-  #galeria [style*="grid-template-columns"] {
+  #galeria [style*="grid-template-columns"],
+  #aliados > div > div:last-child {
     grid-template-columns: minmax(0, 1fr) !important;
   }
   #expectativas [style*="minmax(min(100%, 380px)"] { min-width: 0 !important; }
+
+  #accesos > div {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: var(--space-8) !important;
+  }
+  #accesos figure { min-height: 0 !important; aspect-ratio: 4 / 3 !important; }
 
   #foro > div,
   #accesos > div,

@@ -610,7 +610,7 @@ function SpeakerCard({
     }
   }, rest), /*#__PURE__*/React.createElement("div", {
     style: {
-      aspectRatio: '4 / 5',
+      aspectRatio: '4 / 3',
       background: 'var(--navy-800)',
       position: 'relative',
       display: 'flex',
@@ -2693,7 +2693,7 @@ function Hero({
   }, "Registros agotados") : /*#__PURE__*/React.createElement(__ds_scope.Button, {
     size: "lg",
     onClick: onRegister
-  }, "Save the date"), /*#__PURE__*/React.createElement(__ds_scope.Button, {
+  }, "Regístrate aquí"), /*#__PURE__*/React.createElement(__ds_scope.Button, {
     size: "lg",
     variant: "secondary",
     href: "#teaser",
@@ -2702,17 +2702,7 @@ function Hero({
       size: 18,
       color: "currentColor"
     })
-  }, "Ver teaser"), /*#__PURE__*/React.createElement(__ds_scope.Button, {
-    size: "lg",
-    variant: "ghost",
-    href: poster,
-    download: "WLB-Forum-2026-Save-the-date.png",
-    icon: /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-      name: "download",
-      size: 18,
-      color: "currentColor"
-    })
-  }, "Descargar")))), /*#__PURE__*/React.createElement(__ds_scope.Reveal, {
+  }, "Ver teaser")))), /*#__PURE__*/React.createElement(__ds_scope.Reveal, {
     delay: 200,
     y: 32,
     style: {
@@ -3658,48 +3648,10 @@ Object.assign(__ds_scope, { Gallery });
 
 // ui_kits/forum-site/Program.jsx
 try { (() => {
-/* Confirmed session times and titles; speakers will be announced later. */
-const SESSIONS = {
-  am: [{
-    time: '15:00–15:10',
-    title: 'Bienvenida'
-  }, {
-    time: '15:10–16:00',
-    title: 'La visión del empresario más allá de la rentabilidad'
-  }, {
-    time: '16:05–16:35',
-    title: 'Intervención especial'
-  }, {
-    time: '16:35–16:45',
-    title: 'Receso'
-  }, {
-    time: '16:45–17:35',
-    title: 'Panel: Decisiones que tocan vidas'
-  }, {
-    time: '17:35–18:10',
-    title: 'El rol del empresario en la atención del capital humano'
-  }, {
-    time: '18:10–18:50',
-    title: 'Liderazgo para el florecimiento humano'
-  }, {
-    time: '18:50–19:20',
-    title: 'Conversación'
-  }, {
-    time: '19:20–19:30',
-    title: 'Cierre'
-  }, {
-    time: '19:30',
-    title: 'Coctel de networking'
-  }]
-};
-const SLOT_LABEL = {
-  am: 'Horario'
-};
 function Program({
-  style,
-  allSlots = false
+  assetBase = '../../assets',
+  style
 }) {
-  const slots = ['am'];
   return /*#__PURE__*/React.createElement("section", {
     id: "programa",
     style: {
@@ -3710,146 +3662,24 @@ function Program({
     style: {
       maxWidth: 'var(--page-max)',
       margin: '0 auto',
-      padding: 'var(--space-11) var(--page-gutter)',
-      display: 'grid',
-      gridTemplateColumns: 'minmax(260px,.8fr) minmax(0,1.5fr)',
-      gap: 'var(--space-10)',
-      alignItems: 'start'
+      padding: 'var(--space-11) var(--page-gutter)'
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("img", {
+    src: assetBase + '/programa-wlb-forum-2026.png',
+    alt: 'Programa WLB Forum 2026 — jueves 5 de noviembre, de 3:00 a 7:30 pm',
+    width: 2236,
+    height: 3162,
+    loading: 'eager',
+    decoding: 'async',
     style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 'var(--space-6)',
-      position: 'sticky',
-      top: 96
+      display: 'block',
+      width: '100%',
+      maxWidth: 1100,
+      height: 'auto',
+      margin: '0 auto',
+      borderRadius: 'var(--radius-panel)'
     }
-  }, /*#__PURE__*/React.createElement(__ds_scope.SectionHeading, {
-    eyebrow: "Programa",
-    title: "Programa del",
-    accent: "evento",
-    lead: "Horario de 15:00 a 19:30. Los ponentes se anunciar\xE1n pr\xF3ximamente."
-  })), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 'var(--space-8)'
-    }
-  }, slots.map(sl => /*#__PURE__*/React.createElement("div", {
-    key: sl,
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 'var(--space-4)'
-    }
-  }, allSlots && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: 'var(--font-display)',
-      fontWeight: 'var(--weight-black)',
-      fontSize: 'var(--size-eyebrow)',
-      letterSpacing: 'var(--track-eyebrow)',
-      textTransform: 'uppercase',
-      color: 'var(--orange-500)'
-    }
-  }, SLOT_LABEL[sl]), /*#__PURE__*/React.createElement("ol", {
-    style: {
-      listStyle: 'none',
-      margin: 0,
-      padding: 0,
-      display: 'flex',
-      flexDirection: 'column',
-      borderLeft: '3px solid var(--orange-500)'
-    }
-  }, SESSIONS[sl].map((s, i) => /*#__PURE__*/React.createElement("li", {
-    key: s.time,
-    style: {
-      display: 'grid',
-      gridTemplateColumns: '104px 1fr',
-      gap: 'var(--space-5)',
-      padding: 'var(--space-5) 0 var(--space-5) var(--space-6)',
-      position: 'relative',
-      borderBottom: i === SESSIONS[sl].length - 1 ? 'none' : 'var(--border-hairline)',
-      opacity: 1,
-      breakInside: 'avoid'
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      position: 'absolute',
-      left: -8,
-      top: 'calc(var(--space-5) + 8px)',
-      width: 13,
-      height: 13,
-      borderRadius: 'var(--radius-pill)',
-      background: 'var(--navy-800)',
-      boxShadow: 'inset 0 0 0 3px var(--orange-500)'
-    }
-  }), /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: 'var(--font-display)',
-      fontWeight: 'var(--weight-black)',
-      fontSize: 'var(--size-heading)',
-      lineHeight: 1,
-      color: 'var(--orange-500)',
-      fontVariantNumeric: 'tabular-nums'
-    }
-  }, s.time.split('–').map((part, index) => /*#__PURE__*/React.createElement(React.Fragment, {
-    key: index
-  }, index > 0 && '–', index > 0 && /*#__PURE__*/React.createElement("wbr", null), part))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 6
-    }
-  }, s.format && /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: 'var(--font-display)',
-      fontWeight: 'var(--weight-bold)',
-      fontSize: 'var(--size-micro)',
-      letterSpacing: 'var(--track-eyebrow)',
-      textTransform: 'uppercase',
-      color: 'var(--text-muted)'
-    }
-  }, s.format), /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: 'var(--font-display)',
-      fontWeight: 'var(--weight-black)',
-      fontSize: 'var(--size-subheading)',
-      lineHeight: 'var(--leading-heading)',
-      textTransform: 'uppercase',
-      letterSpacing: '.01em',
-      color: 'var(--white)'
-    }
-  }, s.title), (s.who || s.eje) && /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      alignItems: 'center',
-      gap: 'var(--space-4)',
-      marginTop: 4
-    }
-  }, s.who && /*#__PURE__*/React.createElement("span", {
-    style: {
-      font: 'var(--text-style-body)',
-      fontSize: 'var(--size-small)',
-      color: 'var(--text-body)'
-    }
-  }, s.who), s.eje && /*#__PURE__*/React.createElement("span", {
-    style: {
-      display: 'inline-flex',
-      alignItems: 'center',
-      gap: 8,
-      fontFamily: 'var(--font-display)',
-      fontWeight: 'var(--weight-bold)',
-      fontSize: 'var(--size-micro)',
-      letterSpacing: 'var(--track-label)',
-      textTransform: 'uppercase',
-      color: 'var(--orange-500)'
-    }
-  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: EJE_ICON[s.eje],
-    size: 14,
-    color: "var(--orange-500)"
-  }), s.eje)))))))))));
+  })));
 }
 Object.assign(__ds_scope, { Program });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/forum-site/Program.jsx", error: String((e && e.message) || e) }); }
@@ -4198,33 +4028,47 @@ Object.assign(__ds_scope, { SponsorCta });
 
 // ui_kits/forum-site/Sponsors.jsx
 try { (() => {
-/* "PATROCINADO POR:" — white band directly under the hero. Shows the sponsor
-   strip published for the 2025 edition until the 2026 roster exists. */
+/* "ALIADOS ESTRATÉGICOS" — the current partner logos, shown in the order
+   supplied by the event team. */
 function Sponsors({
-  heading = 'Patrocinado por:',
-  image = __ds_scope.PHOTOS.sponsors25,
-  note = 'Patrocinadores IX edición (2025) — por actualizar.',
+  heading = 'Aliados estratégicos',
+  assetBase = '../../assets',
   style
 }) {
+  const allies = [{
+    src: assetBase + '/logo-kapital.png',
+    alt: 'Kapital Grupo Financiero',
+    square: false,
+    darkOnLight: true
+  }, {
+    src: assetBase + '/logo-american-express.png',
+    alt: 'American Express',
+    square: true
+  }, {
+    src: assetBase + '/logo-ios-offices.png',
+    alt: 'IOS Offices',
+    square: false
+  }];
   return /*#__PURE__*/React.createElement("section", {
-    id: "patrocinadores",
+    id: "aliados",
     style: {
-      background: 'var(--white)',
+      background: 'var(--paper)',
+      borderTop: 'var(--border-hairline-light)',
       ...style
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       maxWidth: 'var(--page-max)',
       margin: '0 auto',
-      padding: 'var(--space-7) var(--page-gutter)',
+      padding: 'var(--space-8) var(--page-gutter)',
       display: 'flex',
       flexDirection: 'column',
-      gap: 'var(--space-4)'
+      gap: 'var(--space-6)'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       gap: 'var(--space-5)'
     }
   }, /*#__PURE__*/React.createElement("span", {
@@ -4242,22 +4086,37 @@ function Sponsors({
       width: 'var(--rule-length)',
       background: 'var(--line-rule)'
     }
-  })), /*#__PURE__*/React.createElement("img", {
-    src: image,
-    alt: "Patrocinadores",
+  })), /*#__PURE__*/React.createElement("div", {
     style: {
-      width: '100%',
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
+      gap: 'var(--space-5)',
+      alignItems: 'stretch'
+    }
+  }, allies.map(ally => /*#__PURE__*/React.createElement("div", {
+    key: ally.alt,
+    style: {
+      minHeight: 152,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 'var(--space-4)',
+      overflow: 'hidden'
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: ally.src,
+    alt: ally.alt,
+    style: {
+      display: 'block',
+      maxWidth: ally.square ? 76 : 280,
+      maxHeight: ally.square ? 76 : 96,
+      width: 'auto',
       height: 'auto',
-      display: 'block'
+      objectFit: 'contain',
+      filter: ally.darkOnLight ? 'invert(1) brightness(1.1)' : undefined,
+      mixBlendMode: ally.darkOnLight ? 'multiply' : undefined
     }
-  }), note && /*#__PURE__*/React.createElement("p", {
-    style: {
-      margin: 0,
-      fontFamily: 'var(--font-body)',
-      fontSize: 'var(--size-small)',
-      color: 'var(--grey-600)'
-    }
-  }, note)));
+  }))))));
 }
 Object.assign(__ds_scope, { Sponsors });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/forum-site/Sponsors.jsx", error: String((e && e.message) || e) }); }
@@ -4267,57 +4126,12 @@ try { (() => {
 /* "INFORMACIÓN DE ACCESOS PRESENCIALES". Address is the Club Industrial address
    published on the 2025 page; confirm for 2026. */
 const MAPS = 'https://www.google.com/maps/search/?api=1&query=Club+Industrial+Av.+Parte+Aguas+698+San+Pedro+Garza+Garc%C3%ADa';
-function downloadWLBCalendar() {
-  const escapeText = value => value.replace(/\\/g, '\\\\').replace(/\r?\n/g, '\\n').replace(/;/g, '\\;').replace(/,/g, '\\,');
-  const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
-  const lines = [
-    'BEGIN:VCALENDAR',
-    'VERSION:2.0',
-    'PRODID:-//IMEF Grupo Monterrey//WLB Forum 2026//ES',
-    'CALSCALE:GREGORIAN',
-    'METHOD:PUBLISH',
-    'BEGIN:VEVENT',
-    'UID:' + crypto.randomUUID() + '@imefwlb-forum-2026.replit.app',
-    'DTSTAMP:' + stamp,
-    'DTSTART:20261105T210000Z',
-    'DTEND:20261106T013000Z',
-    'SUMMARY:' + escapeText('X Work Life Balance Forum 2026 · IMEF Grupo Monterrey'),
-    'LOCATION:' + escapeText('Club Industrial, Av. Parte Aguas 698, Los Arcángeles, 66266 San Pedro Garza García, N.L.'),
-    'DESCRIPTION:' + escapeText('https://imefwlb-forum-2026.replit.app\nInformes: pquiroga@imefmty.com'),
-    'END:VEVENT',
-    'END:VCALENDAR'
-  ];
-  // RFC 5545: CRLF and folding at 75 UTF-8 octets, without splitting characters.
-  const encoder = new TextEncoder();
-  const fold = line => {
-    let result = '', bytes = 0;
-    for (const char of line) {
-      const size = encoder.encode(char).length;
-      if (bytes + size > 75) {
-        result += '\r\n ';
-        bytes = 1;
-      }
-      result += char;
-      bytes += size;
-    }
-    return result;
-  };
-  const blob = new Blob([lines.map(fold).join('\r\n') + '\r\n'], { type: 'text/calendar;charset=utf-8' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = 'wlb-forum-2026.ics';
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 60000);
-}
 function VenueAccess({
   assetBase = '../../assets',
   photo,
   style
 }) {
-  const venuePhoto = photo || assetBase + '/venue-foro-imef-2026-woman.jpg';
+  const venuePhoto = photo || assetBase + '/venue-foro-imef-2026-group.jpeg';
   return /*#__PURE__*/React.createElement("section", {
     id: "accesos",
     style: {
@@ -4330,15 +4144,16 @@ function VenueAccess({
       margin: '0 auto',
       padding: 'var(--space-11) var(--page-gutter)',
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,300px),1fr))',
-      gap: 'var(--space-10)',
-      alignItems: 'center'
+      gridTemplateColumns: 'minmax(0, .9fr) minmax(360px, 1.1fr)',
+      gap: 'clamp(32px, 5vw, 72px)',
+      alignItems: 'stretch'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       flexDirection: 'column',
-      gap: 'var(--space-7)'
+      gap: 'var(--space-8)',
+      minWidth: 0
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.SectionHeading, {
     eyebrow: "Accesos",
@@ -4348,7 +4163,7 @@ function VenueAccess({
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'flex-start',
       gap: 'var(--space-5)'
     }
   }, /*#__PURE__*/React.createElement("span", {
@@ -4395,8 +4210,8 @@ function VenueAccess({
   }, "Av. Parte Aguas 698, Los Arc\xE1ngeles, Zona Loma Larga Poniente,", /*#__PURE__*/React.createElement("br", null), "66266 San Pedro Garza Garc\xEDa, N.L."))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))',
-      gap: 'var(--space-5) var(--space-6)'
+      gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
+      gap: 'var(--space-6) var(--space-5)'
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
@@ -4437,31 +4252,25 @@ function VenueAccess({
       size: 16,
       color: "currentColor"
     })
-  }, "C\xF3mo llegar"), /*#__PURE__*/React.createElement(__ds_scope.Button, {
-    variant: "ghost",
-    onClick: downloadWLBCalendar,
-    icon: /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-      name: "calendar-plus",
-      size: 16,
-      color: "currentColor"
-    })
-  }, "Agregar al calendario"))), /*#__PURE__*/React.createElement("figure", {
+  }, "C\xF3mo llegar"))), /*#__PURE__*/React.createElement("figure", {
     style: {
       margin: 0,
       position: 'relative',
-      aspectRatio: '4 / 5',
-      maxHeight: 640,
+      aspectRatio: '4 / 3',
+      minHeight: 460,
       overflow: 'hidden',
-      background: 'var(--navy-900)'
+      background: 'var(--navy-900)',
+      borderTop: '3px solid var(--orange-500)',
+      borderRadius: 'var(--radius-panel)'
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: venuePhoto,
-    alt: "Asistente conversando durante un foro de IMEF",
+    alt: "Participantes durante un foro de IMEF en Club Industrial",
     style: {
       width: '100%',
       height: '100%',
       objectFit: 'cover',
-      objectPosition: '40% center',
+      objectPosition: 'center',
       filter: 'saturate(.75)'
     }
   }), /*#__PURE__*/React.createElement("span", {
@@ -4505,6 +4314,7 @@ try { (() => {
 const TEASER = 'https://player.vimeo.com/video/1229065857?autoplay=0&mute=0&title=0&sidedock=0&byline=0&color=ff6b02';
 function VideoBlock({
   src = TEASER,
+  assetBase = '../../assets',
   eyebrow = 'Teaser 2026',
   title = 'Así se vive el',
   accent = 'WLB Forum',
@@ -4527,6 +4337,39 @@ function VideoBlock({
       gap: 'var(--space-7)'
     }
   }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 'var(--space-5)'
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.SectionHeading, {
+    eyebrow: "Teaser del evento",
+    title: "WLB Forum 2026",
+    accent: "Work Life Balance",
+    lead: "Una mirada al encuentro que estamos preparando."
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'relative',
+      aspectRatio: '16 / 9',
+      overflow: 'hidden',
+      background: 'var(--navy-800)',
+      borderTop: 'var(--border-rule)',
+      boxShadow: 'var(--shadow-overlay)'
+    }
+  }, /*#__PURE__*/React.createElement("video", {
+    src: assetBase + '/wlb-forum-2026-teaser.mp4',
+    title: "Teaser del WLB Forum 2026",
+    controls: true,
+    playsInline: true,
+    preload: "metadata",
+    style: {
+      display: 'block',
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      border: 0
+    }
+  }))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       flexWrap: 'wrap',
