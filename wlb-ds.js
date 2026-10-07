@@ -2103,7 +2103,7 @@ function Poster({
       fontFamily: 'var(--font-body)',
       fontWeight: 400
     }
-  }, "pquiroga@imefmty.com"))));
+  }, "eventos@imefmty.com"))));
 }
 Object.assign(__ds_scope, { Poster });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/collateral/Poster.jsx", error: String((e && e.message) || e) }); }
@@ -3779,7 +3779,7 @@ function Register({
       fontSize: 'var(--size-small)',
       color: 'var(--text-muted)'
     }
-  }, "Informes: pquiroga@imefmty.com"))));
+  }, "Informes: eventos@imefmty.com"))));
 }
 Object.assign(__ds_scope, { Register });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/forum-site/Register.jsx", error: String((e && e.message) || e) }); }
@@ -3878,9 +3878,9 @@ function SiteFooter({
       marginBottom: 4
     }
   }, "Informes"), /*#__PURE__*/React.createElement("a", {
-    href: "mailto:pquiroga@imefmty.com",
+    href: "mailto:eventos@imefmty.com",
     style: link
-  }, "pquiroga@imefmty.com"), /*#__PURE__*/React.createElement("span", {
+  }, "eventos@imefmty.com"), /*#__PURE__*/React.createElement("span", {
     style: {
       ...link,
       color: 'var(--text-muted)'
@@ -3926,7 +3926,7 @@ try { (() => {
 function SponsorCta({
   name = 'Paola Quiroga',
   role = 'IMEF Grupo Monterrey',
-  email = 'pquiroga@imefmty.com',
+  email = 'eventos@imefmty.com',
   style
 }) {
   return /*#__PURE__*/React.createElement("section", {
