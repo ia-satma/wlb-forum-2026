@@ -3761,6 +3761,7 @@ function Register({
     size: "lg",
     variant: "primary",
     type: "button",
+    href: "https://satma.wufoo.com/forms/z1olbm4s1bm4t0u/",
     style: {
       minWidth: 'min(100%, 340px)',
       minHeight: 80,

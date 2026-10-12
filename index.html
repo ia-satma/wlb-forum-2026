@@ -50,7 +50,7 @@ function EnquiryDialog({ open, onClose }){
 function App(){
   const [enquiry,setEnquiry]=React.useState(false);
   const soldOut=false; /* set true to show the "Registros agotados" state */
-  const goRegister=()=>{const el=document.getElementById('registro');if(el)window.scrollTo({top:el.offsetTop-80,behavior:'smooth'});};
+  const goRegister=()=>{window.location.assign('https://satma.wufoo.com/forms/z1olbm4s1bm4t0u/');};
   return (<div>
     <Navbar items={ITEMS} cta={{label:soldOut?'Agotado':'Regístrate aquí',onClick:goRegister}} assetBase="./assets"/>
     <Hero assetBase="./assets" onRegister={goRegister} soldOut={soldOut}/>
