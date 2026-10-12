@@ -2570,7 +2570,7 @@ function Hero({
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.Logo, {
     variant: "lockup",
-    height: 76,
+    height: 94,
     assetBase: assetBase
   }), /*#__PURE__*/React.createElement("p", {
     style: {
@@ -2611,7 +2611,7 @@ function Hero({
       margin: 0,
       fontFamily: 'var(--font-display)',
       fontWeight: 'var(--weight-black)',
-      fontSize: 'clamp(64px,9vw,128px)',
+      fontSize: 'clamp(56px,7.5vw,112px)',
       lineHeight: 'var(--leading-display)',
       letterSpacing: 'var(--track-display)',
       textTransform: 'uppercase',

@@ -37,14 +37,14 @@ footer > div:last-child > div { color: var(--white) !important; }
 
 @media (max-width: 767px) {
   :root {
-    --page-gutter: 20px;
-    --space-9: 56px;
-    --space-10: 72px;
-    --space-11: 88px;
+    --page-gutter: 18px;
+    --space-9: 48px;
+    --space-10: 60px;
+    --space-11: 72px;
     --size-heading: 24px;
     --size-subheading: 20px;
-    --size-lead: 19px;
-    --size-body: 17px;
+    --size-lead: 18px;
+    --size-body: 16px;
     --size-small: 15px;
     --size-eyebrow: 14px;
     --size-micro: 12px;
@@ -61,12 +61,13 @@ footer > div:last-child > div { color: var(--white) !important; }
   header button, header a[role="button"] { margin-left: auto; white-space: nowrap; }
 
   #inicio > div:nth-of-type(1) { padding-top: var(--space-6) !important; }
+  #inicio > div:nth-of-type(1) img { height: 88px !important; }
   #inicio > div:nth-of-type(2) {
     grid-template-columns: minmax(0, 1fr) !important;
     gap: var(--space-7) !important;
     padding: var(--space-7) var(--page-gutter) var(--space-8) !important;
   }
-  #inicio h1 { font-size: clamp(56px, 18vw, 76px) !important; }
+  #inicio h1 { font-size: clamp(48px, 15vw, 66px) !important; }
   #inicio > div:nth-of-type(3) > div {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     padding: 0 var(--page-gutter) !important;
