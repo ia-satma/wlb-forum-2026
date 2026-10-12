@@ -3682,7 +3682,7 @@ function Program({
       textAlign: 'left'
     }
   }, "Conoce nuestro programa"), /*#__PURE__*/React.createElement("img", {
-    src: assetBase + '/programa-wlb-forum-2026.png?v=20261012-2',
+    src: assetBase + '/programa-wlb-forum-2026.png?v=20261012-3',
     alt: 'Programa WLB Forum 2026 — jueves 5 de noviembre, de 3:00 a 7:30 pm',
     width: 2236,
     height: 3162,
@@ -4068,26 +4068,29 @@ Object.assign(__ds_scope, { SponsorCta });
 
 // ui_kits/forum-site/Sponsors.jsx
 try { (() => {
-/* "ALIADOS ESTRATÉGICOS" — the current partner logos, shown in the order
-   supplied by the event team. */
+/* "ALIADOS ESTRATÉGICOS" — partner logos in alphabetical order. */
 function Sponsors({
   heading = 'Aliados estratégicos',
   assetBase = '../../assets',
   style
 }) {
   const allies = [{
-    src: assetBase + '/logo-kapital.png',
-    alt: 'Kapital Grupo Financiero',
-    square: false,
-    darkOnLight: true
-  }, {
     src: assetBase + '/logo-american-express.png',
     alt: 'American Express',
     square: true
   }, {
+    src: assetBase + '/logo-banregio.png',
+    alt: 'Banregio',
+    square: false
+  }, {
     src: assetBase + '/logo-ios-offices.png',
     alt: 'IOS Offices',
     square: false
+  }, {
+    src: assetBase + '/logo-kapital.png',
+    alt: 'Kapital Grupo Financiero',
+    square: false,
+    darkOnLight: true
   }];
   return /*#__PURE__*/React.createElement("section", {
     id: "aliados",
@@ -4129,7 +4132,7 @@ function Sponsors({
   })), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
+      gridTemplateColumns: 'repeat(4,minmax(0,1fr))',
       gap: 'var(--space-5)',
       alignItems: 'stretch'
     }
