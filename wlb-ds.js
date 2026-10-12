@@ -3665,7 +3665,7 @@ function Program({
       padding: 'var(--space-11) var(--page-gutter)'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: assetBase + '/programa-wlb-forum-2026.png',
+    src: assetBase + '/programa-wlb-forum-2026.png?v=20261012-2',
     alt: 'Programa WLB Forum 2026 — jueves 5 de noviembre, de 3:00 a 7:30 pm',
     width: 2236,
     height: 3162,
