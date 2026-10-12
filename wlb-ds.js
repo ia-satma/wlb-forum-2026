@@ -3671,7 +3671,17 @@ function Program({
       alignItems: 'center',
       gap: 'var(--space-8)'
     }
-  }, /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/React.createElement("h2", {
+    style: {
+      width: '100%',
+      maxWidth: 820,
+      margin: 0,
+      color: 'var(--white)',
+      fontSize: 'clamp(28px, 4vw, 46px)',
+      lineHeight: 1.05,
+      textAlign: 'left'
+    }
+  }, "Conoce nuestro programa"), /*#__PURE__*/React.createElement("img", {
     src: assetBase + '/programa-wlb-forum-2026.png?v=20261012-2',
     alt: 'Programa WLB Forum 2026 — jueves 5 de noviembre, de 3:00 a 7:30 pm',
     width: 2236,
@@ -3685,7 +3695,17 @@ function Program({
       height: 'auto',
       borderRadius: 'var(--radius-panel)'
     }
-  }), /*#__PURE__*/React.createElement("img", {
+  }), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      width: '100%',
+      maxWidth: 820,
+      margin: 'var(--space-5) 0 0',
+      color: 'var(--white)',
+      fontSize: 'clamp(28px, 4vw, 46px)',
+      lineHeight: 1.05,
+      textAlign: 'left'
+    }
+  }, "Conoce nuestros ponentes"), /*#__PURE__*/React.createElement("img", {
     src: assetBase + '/flyer-ponentes-wlb-forum-2026.png?v=20261012-1',
     alt: 'Ponentes WLB Forum 2026',
     width: 2236,
