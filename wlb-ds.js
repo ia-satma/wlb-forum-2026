@@ -3664,6 +3664,13 @@ function Program({
       margin: '0 auto',
       padding: 'var(--space-11) var(--page-gutter)'
     }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: 'var(--space-8)'
+    }
   }, /*#__PURE__*/React.createElement("img", {
     src: assetBase + '/programa-wlb-forum-2026.png?v=20261012-2',
     alt: 'Programa WLB Forum 2026 — jueves 5 de noviembre, de 3:00 a 7:30 pm',
@@ -3674,12 +3681,25 @@ function Program({
     style: {
       display: 'block',
       width: '100%',
-      maxWidth: 1100,
+      maxWidth: 820,
       height: 'auto',
-      margin: '0 auto',
       borderRadius: 'var(--radius-panel)'
     }
-  })));
+  }), /*#__PURE__*/React.createElement("img", {
+    src: assetBase + '/flyer-ponentes-wlb-forum-2026.png?v=20261012-1',
+    alt: 'Ponentes WLB Forum 2026',
+    width: 2236,
+    height: 3162,
+    loading: 'lazy',
+    decoding: 'async',
+    style: {
+      display: 'block',
+      width: '100%',
+      maxWidth: 820,
+      height: 'auto',
+      borderRadius: 'var(--radius-panel)'
+    }
+  }))));
 }
 Object.assign(__ds_scope, { Program });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/forum-site/Program.jsx", error: String((e && e.message) || e) }); }
