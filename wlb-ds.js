@@ -4152,7 +4152,7 @@ function Sponsors({
     alt: ally.alt,
     style: {
       display: 'block',
-      maxWidth: ally.square ? 76 : 280,
+      maxWidth: ally.square ? 76 : '100%',
       maxHeight: ally.square ? 76 : 96,
       width: 'auto',
       height: 'auto',
