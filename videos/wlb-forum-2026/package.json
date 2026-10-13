@@ -25,6 +25,7 @@
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
+    "voice:elevenlabs": "node scripts/generate-elevenlabs-voice.mjs",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   }

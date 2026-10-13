@@ -3682,7 +3682,7 @@ function Program({
       textAlign: 'left'
     }
   }, "Conoce nuestro programa"), /*#__PURE__*/React.createElement("img", {
-    src: assetBase + '/programa-wlb-forum-2026.png?v=20261012-4',
+    src: assetBase + '/programa-wlb-forum-2026.png?v=20261013-1',
     alt: 'Programa WLB Forum 2026 — jueves 5 de noviembre, de 3:00 a 7:30 pm',
     width: 2236,
     height: 3162,
@@ -3706,7 +3706,7 @@ function Program({
       textAlign: 'left'
     }
   }, "Conoce nuestros ponentes"), /*#__PURE__*/React.createElement("img", {
-    src: assetBase + '/flyer-ponentes-wlb-forum-2026.png?v=20261012-2',
+    src: assetBase + '/flyer-ponentes-wlb-forum-2026.png?v=20261013-1',
     alt: 'Ponentes WLB Forum 2026',
     width: 2236,
     height: 3162,
