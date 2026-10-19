@@ -2665,7 +2665,7 @@ function Hero({
     compact: true,
     rule: false,
     icon: "clock",
-    primary: "15:00 \u2013 19:30",
+    primary: "15:00 \u2013 19:35",
     iconSize: 30
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
@@ -2940,7 +2940,7 @@ const EDITIONS = [{
     src: 'ASSET:poster-save-the-date-2026.png',
     kind: 'Save the date'
   }],
-  note: 'Jueves 5 de noviembre · Club Industrial · 15:00 a 19:30',
+  note: 'Jueves 5 de noviembre · Club Industrial · 15:00 a 19:35',
   current: true
 }];
 
@@ -3682,8 +3682,8 @@ function Program({
       textAlign: 'left'
     }
   }, "Conoce nuestro programa"), /*#__PURE__*/React.createElement("img", {
-    src: assetBase + '/programa-wlb-forum-2026.png?v=20261013-1',
-    alt: 'Programa WLB Forum 2026 — jueves 5 de noviembre, de 3:00 a 7:30 pm',
+    src: assetBase + '/programa-wlb-forum-2026.png?v=20261019-2',
+    alt: 'Programa WLB Forum 2026 actualizado al 19 de octubre — jueves 5 de noviembre, de 3:00 a 7:35 pm',
     width: 2236,
     height: 3162,
     loading: 'eager',
@@ -3811,7 +3811,7 @@ function Register({
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
     icon: "clock",
-    primary: "15:00 \u2013 19:30",
+    primary: "15:00 \u2013 19:35",
     iconSize: 26
   }), /*#__PURE__*/React.createElement("p", {
     style: {
@@ -4076,12 +4076,17 @@ function Sponsors({
   style
 }) {
   const allies = [{
-    src: assetBase + '/logo-american-express.png',
+    src: assetBase + '/logo-american-express.png?v=20261019-1',
     alt: 'American Express',
-    square: true
+    square: true,
+    maxHeight: 112
   }, {
     src: assetBase + '/logo-banregio.png',
     alt: 'Banregio',
+    square: false
+  }, {
+    src: assetBase + '/logo-innovasport.png?v=20261019-1',
+    alt: 'Innovasport',
     square: false
   }, {
     src: assetBase + '/logo-ios-offices.png',
@@ -4092,7 +4097,12 @@ function Sponsors({
     alt: 'Kapital Grupo Financiero',
     square: false,
     darkOnLight: true
-  }];
+  }, {
+    src: assetBase + '/logo-noemi-cortes.png?v=20261019-1',
+    alt: 'Noemí Cortés Llamas',
+    square: true,
+    maxHeight: 112
+  }].sort((a, b) => a.alt.localeCompare(b.alt, 'es', { sensitivity: 'base' }));
   return /*#__PURE__*/React.createElement("section", {
     id: "aliados",
     style: {
@@ -4131,31 +4141,29 @@ function Sponsors({
       background: 'var(--line-rule)'
     }
   })), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(4,minmax(0,1fr))',
-      gap: 'var(--space-5)',
-      alignItems: 'stretch'
-    }
+    className: 'allies-grid'
   }, allies.map(ally => /*#__PURE__*/React.createElement("div", {
     key: ally.alt,
     style: {
-      minHeight: 152,
+      minWidth: 0,
+      minHeight: 132,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: 'var(--space-4)',
-      overflow: 'hidden'
+      padding: 'var(--space-3)'
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: ally.src,
     alt: ally.alt,
+    loading: 'lazy',
+    decoding: 'async',
     style: {
       display: 'block',
-      maxWidth: ally.square ? 76 : '100%',
-      maxHeight: ally.square ? 76 : 96,
+      maxWidth: '100%',
+      maxHeight: ally.maxHeight || 96,
       width: 'auto',
       height: 'auto',
+      aspectRatio: ally.square ? '1 / 1' : undefined,
       objectFit: 'contain',
       filter: ally.darkOnLight ? 'invert(1) brightness(1.1)' : undefined,
       mixBlendMode: ally.darkOnLight ? 'multiply' : undefined
@@ -4203,7 +4211,7 @@ function VenueAccess({
     eyebrow: "Accesos",
     title: "Informaci\xF3n de accesos",
     accent: "presenciales",
-    lead: "El foro se lleva a cabo en el Club Industrial. El horario es de 15:00 a 19:30."
+    lead: "El foro se lleva a cabo en el Club Industrial. El horario es de 15:00 a 19:35."
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
@@ -4266,7 +4274,7 @@ function VenueAccess({
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
     icon: "clock",
-    primary: "15:00 \u2013 19:30",
+    primary: "15:00 \u2013 19:35",
     iconSize: 26
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,

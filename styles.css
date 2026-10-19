@@ -26,6 +26,18 @@ html, body { max-width: 100%; overflow-x: hidden; }
    brand accents, rules and actions. */
 footer > div:last-child > div { color: var(--white) !important; }
 
+/* Preserve complete logo artwork and alphabetical reading order at every size. */
+.allies-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .allies-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
 @media (min-width: 1000px) {
   #cultura > div {
     grid-template-columns: minmax(0, 1.45fr) minmax(360px, 1fr) !important;
@@ -100,9 +112,12 @@ footer > div:last-child > div { color: var(--white) !important; }
   }
   #programa > div > div:first-child { position: static !important; }
   #expectativas [style*="grid-template-columns"],
-  #galeria [style*="grid-template-columns"],
-  #aliados > div > div:last-child {
+  #galeria [style*="grid-template-columns"] {
     grid-template-columns: minmax(0, 1fr) !important;
+  }
+  .allies-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3) var(--space-5);
   }
   #expectativas [style*="minmax(min(100%, 380px)"] { min-width: 0 !important; }
 
