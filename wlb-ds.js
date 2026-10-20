@@ -2724,6 +2724,27 @@ function Hero({
       height: 'auto',
       boxShadow: 'var(--shadow-overlay), var(--inset-hairline)'
     }
+  })), /*#__PURE__*/React.createElement("a", {
+    href: assetBase + '/costos-wlb-forum-2026.png?v=20261020-1',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+    'aria-label': 'Ver costos de acceso en tamaño completo (abre en otra pestaña)',
+    style: {
+      display: 'block',
+      marginTop: 'var(--space-5)'
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: assetBase + '/costos-wlb-forum-2026.png?v=20261020-1',
+    alt: 'Costos WLB Forum 2026: socio IMEF, $0; colaborador socio IMEF, $1,200; organizaciones aliadas, $1,200; público en general, $1,700; mesa corporativa para 8 personas, $11,000.',
+    width: 1350,
+    height: 615,
+    loading: 'eager',
+    decoding: 'async',
+    style: {
+      display: 'block',
+      width: '100%',
+      height: 'auto'
+    }
   })))), /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'relative',
@@ -3706,8 +3727,8 @@ function Program({
       textAlign: 'left'
     }
   }, "Conoce nuestros ponentes"), /*#__PURE__*/React.createElement("img", {
-    src: assetBase + '/flyer-ponentes-wlb-forum-2026.png?v=20261013-1',
-    alt: 'Ponentes WLB Forum 2026',
+    src: assetBase + '/flyer-ponentes-wlb-forum-2026.png?v=20261020-1',
+    alt: 'Ponentes WLB Forum 2026, incluyendo a Noemí Cortés',
     width: 2236,
     height: 3162,
     loading: 'lazy',
@@ -3769,7 +3790,29 @@ function Register({
       fontSize: 'clamp(20px, 2.5vw, 30px)',
       letterSpacing: '.08em'
     }
-  }, "Regístrate")), /*#__PURE__*/React.createElement(__ds_scope.Card, {
+  }, "Regístrate"), /*#__PURE__*/React.createElement("a", {
+    href: assetBase + '/costos-wlb-forum-2026.png?v=20261020-1',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+    'aria-label': 'Ver costos de acceso en tamaño completo (abre en otra pestaña)',
+    style: {
+      display: 'block',
+      width: '100%',
+      maxWidth: 680
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: assetBase + '/costos-wlb-forum-2026.png?v=20261020-1',
+    alt: 'Costos WLB Forum 2026: socio IMEF, $0; colaborador socio IMEF, $1,200; organizaciones aliadas, $1,200; público en general, $1,700; mesa corporativa para 8 personas, $11,000.',
+    width: 1350,
+    height: 615,
+    loading: 'eager',
+    decoding: 'async',
+    style: {
+      display: 'block',
+      width: '100%',
+      height: 'auto'
+    }
+  }))), /*#__PURE__*/React.createElement(__ds_scope.Card, {
     surface: "glass",
     accentTop: true,
     style: {
