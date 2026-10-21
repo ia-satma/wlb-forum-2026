@@ -3703,8 +3703,8 @@ function Program({
       textAlign: 'left'
     }
   }, "Conoce nuestro programa"), /*#__PURE__*/React.createElement("img", {
-    src: assetBase + '/programa-wlb-forum-2026.png?v=20261019-2',
-    alt: 'Programa WLB Forum 2026 actualizado al 19 de octubre — jueves 5 de noviembre, de 3:00 a 7:35 pm',
+    src: assetBase + '/programa-wlb-forum-2026.png?v=20261021-1',
+    alt: 'Programa WLB Forum 2026 actualizado al 21 de octubre — jueves 5 de noviembre, de 3:00 a 7:35 pm',
     width: 2236,
     height: 3162,
     loading: 'eager',
@@ -3727,8 +3727,8 @@ function Program({
       textAlign: 'left'
     }
   }, "Conoce nuestros ponentes"), /*#__PURE__*/React.createElement("img", {
-    src: assetBase + '/flyer-ponentes-wlb-forum-2026.png?v=20261020-1',
-    alt: 'Ponentes WLB Forum 2026, incluyendo a Noemí Cortés',
+    src: assetBase + '/flyer-ponentes-wlb-forum-2026.png?v=20261021-1',
+    alt: 'Ponentes WLB Forum 2026 actualizados al 21 de octubre, en orden alfabético',
     width: 2236,
     height: 3162,
     loading: 'lazy',
