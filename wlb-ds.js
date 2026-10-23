@@ -2665,7 +2665,7 @@ function Hero({
     compact: true,
     rule: false,
     icon: "clock",
-    primary: "15:00 \u2013 19:35",
+    primary: "14:30 \u2013 19:35",
     iconSize: 30
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
@@ -2961,7 +2961,7 @@ const EDITIONS = [{
     src: 'ASSET:poster-save-the-date-2026.png',
     kind: 'Save the date'
   }],
-  note: 'Jueves 5 de noviembre · Club Industrial · 15:00 a 19:35',
+  note: 'Jueves 5 de noviembre · Club Industrial · 14:30 a 19:35',
   current: true
 }];
 
@@ -3703,8 +3703,8 @@ function Program({
       textAlign: 'left'
     }
   }, "Conoce nuestro programa"), /*#__PURE__*/React.createElement("img", {
-    src: assetBase + '/programa-wlb-forum-2026.png?v=20261021-1',
-    alt: 'Programa WLB Forum 2026 actualizado al 21 de octubre — jueves 5 de noviembre, de 3:00 a 7:35 pm',
+    src: assetBase + '/programa-wlb-forum-2026.png?v=20261023-1',
+    alt: 'Programa WLB Forum 2026: registro desde las 2:30 pm del jueves 5 de noviembre; cierre a las 7:35 pm',
     width: 2236,
     height: 3162,
     loading: 'eager',
@@ -3854,7 +3854,7 @@ function Register({
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
     icon: "clock",
-    primary: "15:00 \u2013 19:35",
+    primary: "14:30 \u2013 19:35",
     iconSize: 26
   }), /*#__PURE__*/React.createElement("p", {
     style: {
@@ -4254,7 +4254,7 @@ function VenueAccess({
     eyebrow: "Accesos",
     title: "Informaci\xF3n de accesos",
     accent: "presenciales",
-    lead: "El foro se lleva a cabo en el Club Industrial. El horario es de 15:00 a 19:35."
+    lead: "El foro se lleva a cabo en el Club Industrial. El registro inicia a las 14:30 y el cierre es a las 19:35."
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
@@ -4317,7 +4317,7 @@ function VenueAccess({
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
     icon: "clock",
-    primary: "15:00 \u2013 19:35",
+    primary: "14:30 \u2013 19:35",
     iconSize: 26
   }), /*#__PURE__*/React.createElement(__ds_scope.DetailRow, {
     compact: true,
