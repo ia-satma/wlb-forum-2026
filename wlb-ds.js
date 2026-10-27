@@ -3703,8 +3703,8 @@ function Program({
       textAlign: 'left'
     }
   }, "Conoce nuestro programa"), /*#__PURE__*/React.createElement("img", {
-    src: assetBase + '/programa-wlb-forum-2026.png?v=20261023-1',
-    alt: 'Programa WLB Forum 2026: registro desde las 2:30 pm del jueves 5 de noviembre; cierre a las 7:35 pm',
+    src: assetBase + '/programa-wlb-forum-2026.png?v=20261027-1',
+    alt: 'Programa WLB Forum 2026 actualizado al 27 de octubre: registro desde las 2:30 pm del jueves 5 de noviembre; cierre a las 7:35 pm',
     width: 2236,
     height: 3162,
     loading: 'eager',
