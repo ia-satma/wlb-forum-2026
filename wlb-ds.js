@@ -3703,8 +3703,8 @@ function Program({
       textAlign: 'left'
     }
   }, "Conoce nuestro programa"), /*#__PURE__*/React.createElement("img", {
-    src: assetBase + '/programa-wlb-forum-2026.png?v=20261027-1',
-    alt: 'Programa WLB Forum 2026 actualizado al 27 de octubre: registro desde las 2:30 pm del jueves 5 de noviembre; cierre a las 7:35 pm',
+    src: assetBase + '/programa-wlb-forum-2026.png?v=20261028-1',
+    alt: 'Programa WLB Forum 2026 actualizado al 28 de octubre: registro desde las 2:30 pm del jueves 5 de noviembre; cierre a las 7:35 pm',
     width: 2236,
     height: 3162,
     loading: 'eager',
@@ -4112,7 +4112,7 @@ Object.assign(__ds_scope, { SponsorCta });
 
 // ui_kits/forum-site/Sponsors.jsx
 try { (() => {
-/* "ALIADOS ESTRATÉGICOS" — partner logos in alphabetical order. */
+/* "ALIADOS ESTRATÉGICOS" and "ALIADOS EN COLABORACIÓN" — partner logos in alphabetical order. */
 function Sponsors({
   heading = 'Aliados estratégicos',
   assetBase = '../../assets',
@@ -4126,10 +4126,6 @@ function Sponsors({
   }, {
     src: assetBase + '/logo-banregio.png',
     alt: 'Banregio',
-    square: false
-  }, {
-    src: assetBase + '/logo-innovasport.png?v=20261019-1',
-    alt: 'Innovasport',
     square: false
   }, {
     src: assetBase + '/logo-ios-offices.png',
@@ -4146,54 +4142,31 @@ function Sponsors({
     square: true,
     maxHeight: 112
   }].sort((a, b) => a.alt.localeCompare(b.alt, 'es', { sensitivity: 'base' }));
-  return /*#__PURE__*/React.createElement("section", {
-    id: "aliados",
-    style: {
-      background: 'var(--paper)',
-      borderTop: 'var(--border-hairline-light)',
-      ...style
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 'var(--page-max)',
-      margin: '0 auto',
-      padding: 'var(--space-8) var(--page-gutter)',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 'var(--space-6)'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      alignItems: 'flex-start',
-      gap: 'var(--space-5)'
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: 'var(--font-display)',
-      fontWeight: 'var(--weight-black)',
-      fontSize: 'var(--size-eyebrow)',
-      letterSpacing: 'var(--track-eyebrow)',
-      textTransform: 'uppercase',
-      color: 'var(--navy-700)'
-    }
-  }, heading), /*#__PURE__*/React.createElement("span", {
-    style: {
-      height: 'var(--rule-weight)',
-      width: 'var(--rule-length)',
-      background: 'var(--line-rule)'
-    }
-  })), /*#__PURE__*/React.createElement("div", {
-    className: 'allies-grid'
-  }, allies.map(ally => /*#__PURE__*/React.createElement("div", {
+  const collaborationAllies = [{
+    src: assetBase + '/logo-dorh-20-anos.png?v=20261028-2',
+    alt: 'DORH 20 años',
+    square: false,
+    maxHeight: 88
+  }, {
+    src: assetBase + '/logo-innovasport.png?v=20261028-1',
+    alt: 'Innovasport',
+    square: false,
+    maxHeight: 72
+  }, {
+    src: assetBase + '/logo-zumba-pica.png?v=20261028-1',
+    alt: 'Zumba Pica',
+    square: false,
+    maxHeight: 72
+  }].sort((a, b) => a.alt.localeCompare(b.alt, 'es', { sensitivity: 'base' }));
+  const renderAlly = (ally, compact = false) => /*#__PURE__*/React.createElement("div", {
     key: ally.alt,
     style: {
       minWidth: 0,
-      minHeight: 132,
+      minHeight: compact ? 96 : 132,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: 'var(--space-3)'
+      padding: compact ? 'var(--space-2)' : 'var(--space-3)'
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: ally.src,
@@ -4211,7 +4184,29 @@ function Sponsors({
       filter: ally.darkOnLight ? 'invert(1) brightness(1.1)' : undefined,
       mixBlendMode: ally.darkOnLight ? 'multiply' : undefined
     }
-  }))))));
+  }));
+  const renderHeading = (label) => /*#__PURE__*/React.createElement("div", {
+    className: 'allies-card-heading'
+  }, /*#__PURE__*/React.createElement("span", null, label), /*#__PURE__*/React.createElement("span", {
+    className: 'allies-card-rule',
+    'aria-hidden': true
+  }));
+  return /*#__PURE__*/React.createElement("section", {
+    id: "aliados",
+    className: 'allies-section',
+    style: style
+  }, /*#__PURE__*/React.createElement("div", {
+    className: 'allies-wrap'
+  }, /*#__PURE__*/React.createElement("div", {
+    className: 'allies-card allies-card--strategic'
+  }, renderHeading(heading), /*#__PURE__*/React.createElement("div", {
+    className: 'allies-grid'
+  }, allies.map(ally => renderAlly(ally)))), /*#__PURE__*/React.createElement("div", {
+    className: 'allies-card allies-card--collaboration'
+  }, renderHeading("Aliados en colaboración"), /*#__PURE__*/React.createElement("div", {
+    className: 'allies-grid allies-grid--collaboration'
+  }, collaborationAllies.map(ally => renderAlly(ally, true))))));
+
 }
 Object.assign(__ds_scope, { Sponsors });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/forum-site/Sponsors.jsx", error: String((e && e.message) || e) }); }

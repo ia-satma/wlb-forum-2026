@@ -26,16 +26,84 @@ html, body { max-width: 100%; overflow-x: hidden; }
    brand accents, rules and actions. */
 footer > div:last-child > div { color: var(--white) !important; }
 
-/* Preserve complete logo artwork and alphabetical reading order at every size. */
+/* Separate logo groups into two cards with the brand ground visible between them. */
+.allies-section {
+  background: var(--navy-700);
+  border-top: var(--border-hairline-light);
+}
+
+.allies-wrap {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: var(--space-7) var(--page-gutter);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.allies-card {
+  min-width: 0;
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.allies-card--strategic {
+  background: var(--paper);
+}
+
+.allies-card--collaboration {
+  background: var(--paper);
+}
+
+.allies-card-heading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  font-size: var(--size-eyebrow);
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  color: var(--navy-700);
+}
+
+.allies-card--collaboration .allies-card-heading {
+  font-size: var(--size-micro);
+}
+
+.allies-card-rule {
+  display: block;
+  width: clamp(40px, 8vw, 88px);
+  height: var(--rule-weight);
+  background: var(--orange-500);
+}
+
 .allies-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: var(--space-5);
   align-items: stretch;
 }
 
+.allies-grid--collaboration {
+  grid-template-columns: repeat(3, minmax(120px, 220px));
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.allies-grid--collaboration > div {
+  min-height: 88px !important;
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .allies-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .allies-grid--collaboration {
+    grid-template-columns: repeat(3, minmax(120px, 200px));
+  }
 }
 
 @media (min-width: 1000px) {
@@ -63,6 +131,12 @@ footer > div:last-child > div { color: var(--white) !important; }
   }
 
   body { line-height: 1.6; }
+
+  .allies-wrap { padding: var(--space-6) var(--page-gutter); }
+  .allies-card {
+    padding: var(--space-4) var(--space-3);
+    border-radius: 10px;
+  }
 
   header > div {
     padding: 12px var(--page-gutter) !important;
@@ -118,6 +192,9 @@ footer > div:last-child > div { color: var(--white) !important; }
   .allies-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-3) var(--space-5);
+  }
+  .allies-grid--collaboration {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   #expectativas [style*="minmax(min(100%, 380px)"] { min-width: 0 !important; }
 
